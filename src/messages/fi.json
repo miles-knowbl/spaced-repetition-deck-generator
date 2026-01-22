@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Pakkakortit Generaattori",
+    "subtitle": "Luo flash-korttipakkoja kieltenopiskeluun",
+    "learning": "Opiskeltava kieli:"
+  },
+  "input": {
+    "title": "Lisää Kortteja",
+    "tabs": {
+      "ai": "AI-generointi",
+      "manual": "Manuaalinen",
+      "import": "Tuonti"
+    }
+  },
+  "aiForm": {
+    "mode": "Tila",
+    "topic": "Aihe",
+    "wordList": "Sanalista",
+    "topicLabel": "Syötä aihe (esim. \"ruoka ja ruoanlaitto\")",
+    "wordListLabel": "Syötä sanat, yksi per rivi",
+    "topicPlaceholder": "Syötä aihe kuten \"matkavokabularisaatio\", \"liiketerminologia\" jne.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Luotavat kortit",
+    "cards": "korttia",
+    "error": "Syötä aihe tai sanalista",
+    "generating": "Luodaan {language}-kielelle...",
+    "generate": "Luo Kortit"
+  },
+  "manualForm": {
+    "termLabel": "Termi (kohdekielellä)",
+    "termPlaceholder": "esim. hola",
+    "translationLabel": "Käännös (Englanti)",
+    "translationPlaceholder": "esim. hello",
+    "exampleLabel": "Esimerkkilause (valinnainen)",
+    "examplePlaceholder": "esim. Hola! Como estas?",
+    "exampleTranslationLabel": "Esimerkkin käännös (valinnainen)",
+    "exampleTranslationPlaceholder": "esim. Hello! How are you?",
+    "required": "*",
+    "termError": "Syötä termi",
+    "translationError": "Syötä käännös",
+    "addCard": "Lisää Kortti"
+  },
+  "importForm": {
+    "uploadTitle": "Klikkaa ladataksesi CSV tai TXT tiedostoa",
+    "uploadHint": "Maksimi 1MB. Muoto: edessä, takana, esimerkki (valinnainen)",
+    "hasHeader": "Tiedostolla on otsikkorivi (ohita ensimmäinen rivi)",
+    "fileSizeError": "Tiedoston on oltava alle 1MB",
+    "fileTypeError": "Tiedoston on oltava CSV tai TXT",
+    "noCardsError": "Ei kelvollisia flash-kortteja tiedostossa",
+    "parseError": "Ei voitu jäsentää tiedostoa. Tarkista muoto.",
+    "imported": "Tuotiin {count} korttia",
+    "skipped": "({count} ohitettu)",
+    "showWarnings": "Näytä {count} varoitus/varoitusta",
+    "formatTitle": "Odotettu muoto:",
+    "csvFormat": "CSV: edessä,takana,esimerkki,esimerkinKäännös",
+    "txtFormat": "TXT: edessä;takana;esimerkki (sarkain, puolipiste tai pilkulla erotettu)"
+  },
+  "preview": {
+    "title": "Esikatselu",
+    "cardCount": "{count} kortti",
+    "cardCountPlural": "{count} korttia",
+    "deckName": "Pakan Nimi",
+    "deckNamePlaceholder": "Oma Kielipakka",
+    "clearAll": "Tyhjennä Kaikki",
+    "noCards": "Ei kortteja vielä",
+    "noCardsHint": "Lisää kortteja käyttämällä AI-generointia, manuaalista syöttöä tai tiedostotuontia"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Edessä (termi)",
+    "backPlaceholder": "Takana (käännös)",
+    "examplePlaceholder": "Esimerkkilause (valinnainen)",
+    "exampleTranslationPlaceholder": "Esimerkin käännös (valinnainen)",
+    "cancel": "Peruuta",
+    "save": "Tallenna"
+  },
+  "export": {
+    "button": "Vie Ankiin",
+    "exporting": "Viedään..."
+  },
+  "languages": {
+    "en": "Englanti",
+    "es": "Espanja",
+    "fr": "Ranska",
+    "de": "Saksa",
+    "it": "Italia",
+    "pt": "Portugali",
+    "nl": "Hollanti",
+    "ru": "Venäjä",
+    "ja": "Japani",
+    "ko": "Korea",
+    "zh": "Kiina",
+    "ar": "Arabia",
+    "hi": "Hindi",
+    "tr": "Turkki",
+    "pl": "Puola",
+    "vi": "Vietnam",
+    "th": "Thaimaa",
+    "sv": "Ruotsi",
+    "da": "Tanska",
+    "no": "Norja",
+    "fi": "Suomi",
+    "el": "Kreikka",
+    "he": "Heprea",
+    "cs": "Tšekki",
+    "ro": "Romania",
+    "hu": "Unkari",
+    "id": "Indonesia",
+    "ms": "Malai",
+    "uk": "Ukraina"
+  },
+  "languageSelector": {
+    "uiLanguage": "Käyttöliittymän Kieli",
+    "targetLanguage": "Opiskeltava kieli:",
+    "selectLanguage": "Valitse kieli"
+  }
+}

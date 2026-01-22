@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Penjana Dek Anki",
+    "subtitle": "Cipta dek kad kilat untuk pembelajaran bahasa",
+    "learning": "Pembelajaran:"
+  },
+  "input": {
+    "title": "Tambah Kad",
+    "tabs": {
+      "ai": "Jana dengan AI",
+      "manual": "Manual",
+      "import": "Import"
+    }
+  },
+  "aiForm": {
+    "mode": "Mod",
+    "topic": "Topik",
+    "wordList": "Senarai Perkataan",
+    "topicLabel": "Masukkan topik (contoh: \"makanan dan masakan\")",
+    "wordListLabel": "Masukkan perkataan, satu per baris",
+    "topicPlaceholder": "Masukkan topik seperti \"perbendaharaan perjalanan\", \"istilah perniagaan\", dll.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Kad untuk dijana",
+    "cards": "kad",
+    "error": "Sila masukkan topik atau senarai perkataan",
+    "generating": "Menjana untuk {language}...",
+    "generate": "Jana Kad"
+  },
+  "manualForm": {
+    "termLabel": "Istilah (dalam bahasa sasaran)",
+    "termPlaceholder": "contoh, hola",
+    "translationLabel": "Terjemahan (Inggeris)",
+    "translationPlaceholder": "contoh, hello",
+    "exampleLabel": "Ayat contoh (pilihan)",
+    "examplePlaceholder": "contoh, Hola! Como estas?",
+    "exampleTranslationLabel": "Terjemahan contoh (pilihan)",
+    "exampleTranslationPlaceholder": "contoh, Hello! How are you?",
+    "required": "*",
+    "termError": "Sila masukkan istilah",
+    "translationError": "Sila masukkan terjemahan",
+    "addCard": "Tambah Kad"
+  },
+  "importForm": {
+    "uploadTitle": "Klik untuk memuat fail CSV atau TXT",
+    "uploadHint": "Maksimum 1MB. Format: hadapan, belakang, contoh (pilihan)",
+    "hasHeader": "Fail mempunyai baris tajuk (langkau baris pertama)",
+    "fileSizeError": "Fail mestilah di bawah 1MB",
+    "fileTypeError": "Fail mestilah CSV atau TXT",
+    "noCardsError": "Tiada kad kilat sah ditemui dalam fail",
+    "parseError": "Tidak dapat menghuraikan fail. Periksa format.",
+    "imported": "Diimport {count} kad",
+    "skipped": "({count} dilangkau)",
+    "showWarnings": "Tunjukkan {count} amaran",
+    "formatTitle": "Format yang dijangka:",
+    "csvFormat": "CSV: hadapan,belakang,contoh,terjemahanContoh",
+    "txtFormat": "TXT: hadapan;belakang;contoh (tab, koma, atau pemisah dibahagikan)"
+  },
+  "preview": {
+    "title": "Pratonton",
+    "cardCount": "{count} kad",
+    "cardCountPlural": "{count} kad",
+    "deckName": "Nama Dek",
+    "deckNamePlaceholder": "Dek Bahasa Saya",
+    "clearAll": "Padam Semua",
+    "noCards": "Tiada kad lagi",
+    "noCardsHint": "Tambah kad menggunakan penjanaan AI, kemasukan manual, atau import fail"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Hadapan (istilah)",
+    "backPlaceholder": "Belakang (terjemahan)",
+    "examplePlaceholder": "Ayat contoh (pilihan)",
+    "exampleTranslationPlaceholder": "Terjemahan contoh (pilihan)",
+    "cancel": "Batal",
+    "save": "Simpan"
+  },
+  "export": {
+    "button": "Export ke Anki",
+    "exporting": "Mengexport..."
+  },
+  "languages": {
+    "en": "Inggeris",
+    "es": "Sepanyol",
+    "fr": "Perancis",
+    "de": "Jerman",
+    "it": "Itali",
+    "pt": "Portugis",
+    "nl": "Belanda",
+    "ru": "Rusia",
+    "ja": "Jepun",
+    "ko": "Korea",
+    "zh": "Cina",
+    "ar": "Arab",
+    "hi": "Hindi",
+    "tr": "Turki",
+    "pl": "Poland",
+    "vi": "Vietnam",
+    "th": "Thai",
+    "sv": "Sweden",
+    "da": "Denmark",
+    "no": "Norway",
+    "fi": "Finland",
+    "el": "Yunani",
+    "he": "Ibrani",
+    "cs": "Ceko",
+    "ro": "Romania",
+    "hu": "Hungary",
+    "id": "Indonesia",
+    "ms": "Melayu",
+    "uk": "Ukraine"
+  },
+  "languageSelector": {
+    "uiLanguage": "Bahasa Antarmuka",
+    "targetLanguage": "Pembelajaran:",
+    "selectLanguage": "Pilih bahasa"
+  }
+}

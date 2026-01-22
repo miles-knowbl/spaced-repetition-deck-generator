@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Generador de Mazos Anki",
+    "subtitle": "Crea mazos de tarjetas para aprender idiomas",
+    "learning": "Aprendiendo:"
+  },
+  "input": {
+    "title": "Agregar Tarjetas",
+    "tabs": {
+      "ai": "Generar con IA",
+      "manual": "Manual",
+      "import": "Importar"
+    }
+  },
+  "aiForm": {
+    "mode": "Modo",
+    "topic": "Tema",
+    "wordList": "Lista de Palabras",
+    "topicLabel": "Ingresa un tema (ej., \"comida y cocina\")",
+    "wordListLabel": "Ingresa palabras, una por linea",
+    "topicPlaceholder": "Ingresa un tema como \"vocabulario de viajes\", \"terminos de negocios\", etc.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Tarjetas a generar",
+    "cards": "tarjetas",
+    "error": "Por favor ingresa un tema o lista de palabras",
+    "generating": "Generando para {language}...",
+    "generate": "Generar Tarjetas"
+  },
+  "manualForm": {
+    "termLabel": "Termino (en idioma objetivo)",
+    "termPlaceholder": "ej., hola",
+    "translationLabel": "Traduccion (Espanol)",
+    "translationPlaceholder": "ej., hello",
+    "exampleLabel": "Oracion de ejemplo (opcional)",
+    "examplePlaceholder": "ej., Hola! Como estas?",
+    "exampleTranslationLabel": "Traduccion del ejemplo (opcional)",
+    "exampleTranslationPlaceholder": "ej., Hello! How are you?",
+    "required": "*",
+    "termError": "Por favor ingresa el termino",
+    "translationError": "Por favor ingresa la traduccion",
+    "addCard": "Agregar Tarjeta"
+  },
+  "importForm": {
+    "uploadTitle": "Haz clic para subir archivo CSV o TXT",
+    "uploadHint": "Max 1MB. Formato: frente, reverso, ejemplo (opcional)",
+    "hasHeader": "El archivo tiene fila de encabezado (omitir primera fila)",
+    "fileSizeError": "El archivo debe ser menor a 1MB",
+    "fileTypeError": "El archivo debe ser CSV o TXT",
+    "noCardsError": "No se encontraron tarjetas validas en el archivo",
+    "parseError": "No se pudo analizar el archivo. Verifica el formato.",
+    "imported": "Importadas {count} tarjetas",
+    "skipped": "({count} omitidas)",
+    "showWarnings": "Mostrar {count} advertencia(s)",
+    "formatTitle": "Formato esperado:",
+    "csvFormat": "CSV: frente,reverso,ejemplo,traduccionEjemplo",
+    "txtFormat": "TXT: frente;reverso;ejemplo (separado por tab, punto y coma, o coma)"
+  },
+  "preview": {
+    "title": "Vista Previa",
+    "cardCount": "{count} tarjeta",
+    "cardCountPlural": "{count} tarjetas",
+    "deckName": "Nombre del Mazo",
+    "deckNamePlaceholder": "Mi Mazo de Idiomas",
+    "clearAll": "Limpiar Todo",
+    "noCards": "Sin tarjetas aun",
+    "noCardsHint": "Agrega tarjetas usando generacion IA, entrada manual, o importacion de archivo"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Frente (termino)",
+    "backPlaceholder": "Reverso (traduccion)",
+    "examplePlaceholder": "Oracion de ejemplo (opcional)",
+    "exampleTranslationPlaceholder": "Traduccion del ejemplo (opcional)",
+    "cancel": "Cancelar",
+    "save": "Guardar"
+  },
+  "export": {
+    "button": "Exportar a Anki",
+    "exporting": "Exportando..."
+  },
+  "languages": {
+    "en": "Ingles",
+    "es": "Espanol",
+    "fr": "Frances",
+    "de": "Aleman",
+    "it": "Italiano",
+    "pt": "Portugues",
+    "nl": "Holandes",
+    "ru": "Ruso",
+    "ja": "Japones",
+    "ko": "Coreano",
+    "zh": "Chino",
+    "ar": "Arabe",
+    "hi": "Hindi",
+    "tr": "Turco",
+    "pl": "Polaco",
+    "vi": "Vietnamita",
+    "th": "Tailandes",
+    "sv": "Sueco",
+    "da": "Danes",
+    "no": "Noruego",
+    "fi": "Finlandes",
+    "el": "Griego",
+    "he": "Hebreo",
+    "cs": "Checo",
+    "ro": "Rumano",
+    "hu": "Hungaro",
+    "id": "Indonesio",
+    "ms": "Malayo",
+    "uk": "Ucraniano"
+  },
+  "languageSelector": {
+    "uiLanguage": "Idioma de Interfaz",
+    "targetLanguage": "Aprendiendo:",
+    "selectLanguage": "Seleccionar idioma"
+  }
+}

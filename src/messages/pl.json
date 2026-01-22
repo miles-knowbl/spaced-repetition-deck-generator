@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Generator Talii Anki",
+    "subtitle": "Twórz talię fiszek do nauki języków",
+    "learning": "Nauka:"
+  },
+  "input": {
+    "title": "Dodaj Karty",
+    "tabs": {
+      "ai": "Generuj AI",
+      "manual": "Ręcznie",
+      "import": "Importuj"
+    }
+  },
+  "aiForm": {
+    "mode": "Tryb",
+    "topic": "Temat",
+    "wordList": "Lista słów",
+    "topicLabel": "Wpisz temat (np. \"jedzenie i gotowanie\")",
+    "wordListLabel": "Wpisz słowa, jedno na linię",
+    "topicPlaceholder": "Wpisz temat taki jak \"słownictwo podróżnicze\", \"terminy biznesowe\", itp.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Liczba kart do wygenerowania",
+    "cards": "karty",
+    "error": "Proszę wpisać temat lub listę słów",
+    "generating": "Generowanie dla {language}...",
+    "generate": "Wygeneruj Karty"
+  },
+  "manualForm": {
+    "termLabel": "Termin (w języku docelowym)",
+    "termPlaceholder": "np. hola",
+    "translationLabel": "Tłumaczenie (język angielski)",
+    "translationPlaceholder": "np. hello",
+    "exampleLabel": "Przykładowe zdanie (opcjonalnie)",
+    "examplePlaceholder": "np. Hola! Como estas?",
+    "exampleTranslationLabel": "Tłumaczenie przykładu (opcjonalnie)",
+    "exampleTranslationPlaceholder": "np. Hello! How are you?",
+    "required": "*",
+    "termError": "Proszę wpisać termin",
+    "translationError": "Proszę wpisać tłumaczenie",
+    "addCard": "Dodaj Kartę"
+  },
+  "importForm": {
+    "uploadTitle": "Kliknij aby załadować plik CSV lub TXT",
+    "uploadHint": "Maks 1MB. Format: przód, tył, przykład (opcjonalnie)",
+    "hasHeader": "Plik ma wiersz nagłówka (pomiń pierwszy wiersz)",
+    "fileSizeError": "Plik musi być poniżej 1MB",
+    "fileTypeError": "Plik musi być CSV lub TXT",
+    "noCardsError": "Nie znaleziono ważnych fiszek w pliku",
+    "parseError": "Nie można przeanalizować pliku. Sprawdź format.",
+    "imported": "Zaimportowano {count} kart",
+    "skipped": "({count} pominięto)",
+    "showWarnings": "Pokaż {count} ostrzeżenie(nia)",
+    "formatTitle": "Oczekiwany format:",
+    "csvFormat": "CSV: przód,tył,przykład,tłumaczenie przykładu",
+    "txtFormat": "TXT: przód;tył;przykład (rozdzielone tabulacją, średnikiem lub przecinkiem)"
+  },
+  "preview": {
+    "title": "Podgląd",
+    "cardCount": "{count} karta",
+    "cardCountPlural": "{count} karty",
+    "deckName": "Nazwa Talii",
+    "deckNamePlaceholder": "Moja Talia Językowa",
+    "clearAll": "Wyczyść Wszystko",
+    "noCards": "Brak kart",
+    "noCardsHint": "Dodaj karty używając generowania AI, ręcznego wprowadzenia lub importu pliku"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Przód (termin)",
+    "backPlaceholder": "Tył (tłumaczenie)",
+    "examplePlaceholder": "Przykładowe zdanie (opcjonalnie)",
+    "exampleTranslationPlaceholder": "Tłumaczenie przykładu (opcjonalnie)",
+    "cancel": "Anuluj",
+    "save": "Zapisz"
+  },
+  "export": {
+    "button": "Eksportuj do Anki",
+    "exporting": "Eksportowanie..."
+  },
+  "languages": {
+    "en": "Angielski",
+    "es": "Hiszpański",
+    "fr": "Francuski",
+    "de": "Niemiecki",
+    "it": "Włoski",
+    "pt": "Portugalski",
+    "nl": "Holenderski",
+    "ru": "Rosyjski",
+    "ja": "Japoński",
+    "ko": "Koreański",
+    "zh": "Chiński",
+    "ar": "Arabski",
+    "hi": "Hindi",
+    "tr": "Turecki",
+    "pl": "Polski",
+    "vi": "Wietnamski",
+    "th": "Tajski",
+    "sv": "Szwedzki",
+    "da": "Duński",
+    "no": "Norweski",
+    "fi": "Fiński",
+    "el": "Grecki",
+    "he": "Hebrajski",
+    "cs": "Czeski",
+    "ro": "Rumuński",
+    "hu": "Węgierski",
+    "id": "Indonezyjski",
+    "ms": "Malajski",
+    "uk": "Ukraiński"
+  },
+  "languageSelector": {
+    "uiLanguage": "Język Interfejsu",
+    "targetLanguage": "Nauka:",
+    "selectLanguage": "Wybierz język"
+  }
+}

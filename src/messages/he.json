@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "מחולל חפיסות Anki",
+    "subtitle": "יצירת חבילות כרטיסי זיכרון ללימוד שפות",
+    "learning": "לימוד:"
+  },
+  "input": {
+    "title": "הוספת כרטיסים",
+    "tabs": {
+      "ai": "יצירה עם AI",
+      "manual": "ידני",
+      "import": "ייבוא"
+    }
+  },
+  "aiForm": {
+    "mode": "מצב",
+    "topic": "נושא",
+    "wordList": "רשימת מילים",
+    "topicLabel": "הזן נושא (לדוגמה, \"אוכל ובישול\")",
+    "wordListLabel": "הזן מילים, אחת בשורה",
+    "topicPlaceholder": "הזן נושא כמו \"אוצר מילים לנסיעות\", \"מונחים עסקיים\", וכו'",
+    "wordListPlaceholder": "שלום\nתודה\nבבקשה\nשלום",
+    "cardCount": "מספר כרטיסים ליצירה",
+    "cards": "כרטיסים",
+    "error": "אנא הזן נושא או רשימת מילים",
+    "generating": "יצירה עבור {language}...",
+    "generate": "צור כרטיסים"
+  },
+  "manualForm": {
+    "termLabel": "מונח (בשפה המטרה)",
+    "termPlaceholder": "לדוגמה, שלום",
+    "translationLabel": "תרגום (אנגלית)",
+    "translationPlaceholder": "לדוגמה, hello",
+    "exampleLabel": "משפט לדוגמה (אופציונלי)",
+    "examplePlaceholder": "לדוגמה, שלום! מה שלומך?",
+    "exampleTranslationLabel": "תרגום הדוגמה (אופציונלי)",
+    "exampleTranslationPlaceholder": "לדוגמה, Hello! How are you?",
+    "required": "*",
+    "termError": "אנא הזן את המונח",
+    "translationError": "אנא הזן את התרגום",
+    "addCard": "הוסף כרטיס"
+  },
+  "importForm": {
+    "uploadTitle": "לחץ כדי להעלות קובץ CSV או TXT",
+    "uploadHint": "מקס' 1MB. פורמט: חזית, עמורה, דוגמה (אופציונלי)",
+    "hasHeader": "לקובץ יש שורת כותרת (דלג על שורה ראשונה)",
+    "fileSizeError": "הקובץ חייב להיות פחות מ-1MB",
+    "fileTypeError": "הקובץ חייב להיות CSV או TXT",
+    "noCardsError": "לא נמצאו כרטיסי זיכרון תקפים בקובץ",
+    "parseError": "לא הצלחתי לפרסם את הקובץ. בדוק את הפורמט.",
+    "imported": "יובאו {count} כרטיסים",
+    "skipped": "({count} דולקו)",
+    "showWarnings": "הצג {count} אזהרה(ות)",
+    "formatTitle": "פורמט צפוי:",
+    "csvFormat": "CSV: חזית,עמורה,דוגמה,תרגום דוגמה",
+    "txtFormat": "TXT: חזית;עמורה;דוגמה (מופרדים בטאב, קו עליון או פסיק)"
+  },
+  "preview": {
+    "title": "תצוגה מקדימה",
+    "cardCount": "{count} כרטיס",
+    "cardCountPlural": "{count} כרטיסים",
+    "deckName": "שם החפיסה",
+    "deckNamePlaceholder": "חפיסת השפה שלי",
+    "clearAll": "מחק הכל",
+    "noCards": "אין כרטיסים עדיין",
+    "noCardsHint": "הוסף כרטיסים באמצעות יצירה עם AI, הזנה ידנית או ייבוא קובץ"
+  },
+  "cardItem": {
+    "frontPlaceholder": "חזית (מונח)",
+    "backPlaceholder": "עמורה (תרגום)",
+    "examplePlaceholder": "משפט לדוגמה (אופציונלי)",
+    "exampleTranslationPlaceholder": "תרגום דוגמה (אופציונלי)",
+    "cancel": "ביטול",
+    "save": "שמור"
+  },
+  "export": {
+    "button": "ייצא ל-Anki",
+    "exporting": "מייצא..."
+  },
+  "languages": {
+    "en": "אנגלית",
+    "es": "ספרדית",
+    "fr": "צרפתית",
+    "de": "גרמנית",
+    "it": "איטלקית",
+    "pt": "פורטוגזית",
+    "nl": "הולנדית",
+    "ru": "רוסית",
+    "ja": "יפנית",
+    "ko": "קוריאנית",
+    "zh": "סינית",
+    "ar": "ערבית",
+    "hi": "הינדית",
+    "tr": "טורקית",
+    "pl": "פולנית",
+    "vi": "וייטנאמית",
+    "th": "תאית",
+    "sv": "שוודית",
+    "da": "דנית",
+    "no": "נורווגית",
+    "fi": "פינית",
+    "el": "יוונית",
+    "he": "עברית",
+    "cs": "צ'כית",
+    "ro": "רומנית",
+    "hu": "הונגרית",
+    "id": "אינדונזית",
+    "ms": "מליית",
+    "uk": "אוקראינית"
+  },
+  "languageSelector": {
+    "uiLanguage": "שפת הממשק",
+    "targetLanguage": "לימוד:",
+    "selectLanguage": "בחר שפה"
+  }
+}

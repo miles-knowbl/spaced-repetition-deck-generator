@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { useDeckStore } from '@/stores/deckStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,6 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Plus } from 'lucide-react';
 
 export function ManualEntryForm() {
+  const t = useTranslations('manualForm');
   const [front, setFront] = useState('');
   const [back, setBack] = useState('');
   const [example, setExample] = useState('');
@@ -22,12 +24,12 @@ export function ManualEntryForm() {
     setError(null);
 
     if (!front.trim()) {
-      setError('Please enter the term');
+      setError(t('termError'));
       return;
     }
 
     if (!back.trim()) {
-      setError('Please enter the translation');
+      setError(t('translationError'));
       return;
     }
 
@@ -40,7 +42,6 @@ export function ManualEntryForm() {
       source: 'manual',
     });
 
-    // Clear form
     setFront('');
     setBack('');
     setExample('');
@@ -50,54 +51,64 @@ export function ManualEntryForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4 pt-4">
       <div className="space-y-2">
-        <Label htmlFor="front">Term (in target language) *</Label>
+        <Label htmlFor="front" className="text-sm font-medium">
+          {t('termLabel')} <span className="text-destructive">{t('required')}</span>
+        </Label>
         <Input
           id="front"
           value={front}
           onChange={(e) => setFront(e.target.value)}
-          placeholder="e.g., hola"
+          placeholder={t('termPlaceholder')}
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="back">Translation (English) *</Label>
+        <Label htmlFor="back" className="text-sm font-medium">
+          {t('translationLabel')} <span className="text-destructive">{t('required')}</span>
+        </Label>
         <Input
           id="back"
           value={back}
           onChange={(e) => setBack(e.target.value)}
-          placeholder="e.g., hello"
+          placeholder={t('translationPlaceholder')}
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="example">Example sentence (optional)</Label>
+        <Label htmlFor="example" className="text-sm font-medium text-muted-foreground">
+          {t('exampleLabel')}
+        </Label>
         <Textarea
           id="example"
           value={example}
           onChange={(e) => setExample(e.target.value)}
-          placeholder="e.g., ¡Hola! ¿Cómo estás?"
-          className="min-h-[60px]"
+          placeholder={t('examplePlaceholder')}
+          className="min-h-[70px]"
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="exampleTranslation">
-          Example translation (optional)
+        <Label htmlFor="exampleTranslation" className="text-sm font-medium text-muted-foreground">
+          {t('exampleTranslationLabel')}
         </Label>
         <Textarea
           id="exampleTranslation"
           value={exampleTranslation}
           onChange={(e) => setExampleTranslation(e.target.value)}
-          placeholder="e.g., Hello! How are you?"
-          className="min-h-[60px]"
+          placeholder={t('exampleTranslationPlaceholder')}
+          className="min-h-[70px]"
         />
       </div>
 
-      {error && <p className="text-sm text-destructive">{error}</p>}
+      {error && (
+        <p className="text-sm text-destructive bg-destructive/10 px-3 py-2 rounded-lg">
+          {error}
+        </p>
+      )}
 
       <Button type="submit" className="w-full">
         <Plus className="mr-2 h-4 w-4" />
-        Add Card
+        {t('addCard')}
       </Button>
     </form>
   );

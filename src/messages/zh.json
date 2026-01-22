@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki 卡组生成器",
+    "subtitle": "为语言学习创建闪卡卡组",
+    "learning": "学习语言:"
+  },
+  "input": {
+    "title": "添加卡片",
+    "tabs": {
+      "ai": "AI 生成",
+      "manual": "手动",
+      "import": "导入"
+    }
+  },
+  "aiForm": {
+    "mode": "模式",
+    "topic": "主题",
+    "wordList": "词汇列表",
+    "topicLabel": "输入一个主题 (例如，\"食物和烹饪\")",
+    "wordListLabel": "输入词汇，每行一个",
+    "topicPlaceholder": "输入主题，例如 \"旅游词汇\"、\"商务术语\" 等",
+    "wordListPlaceholder": "你好\n谢谢\n请\n再见",
+    "cardCount": "要生成的卡片数",
+    "cards": "张卡片",
+    "error": "请输入主题或词汇列表",
+    "generating": "正在为 {language} 生成...",
+    "generate": "生成卡片"
+  },
+  "manualForm": {
+    "termLabel": "词汇 (目标语言)",
+    "termPlaceholder": "例如，你好",
+    "translationLabel": "翻译 (英文)",
+    "translationPlaceholder": "例如，hello",
+    "exampleLabel": "例句 (可选)",
+    "examplePlaceholder": "例如，你好！你好吗？",
+    "exampleTranslationLabel": "例句翻译 (可选)",
+    "exampleTranslationPlaceholder": "例如，Hello! How are you?",
+    "required": "*",
+    "termError": "请输入词汇",
+    "translationError": "请输入翻译",
+    "addCard": "添加卡片"
+  },
+  "importForm": {
+    "uploadTitle": "点击上传 CSV 或 TXT 文件",
+    "uploadHint": "最大 1MB。格式：前面、背面、例句 (可选)",
+    "hasHeader": "文件有标题行 (跳过第一行)",
+    "fileSizeError": "文件必须小于 1MB",
+    "fileTypeError": "文件必须是 CSV 或 TXT 格式",
+    "noCardsError": "文件中没有找到有效的闪卡",
+    "parseError": "无法解析文件。请检查格式。",
+    "imported": "导入了 {count} 张卡片",
+    "skipped": "({count} 张已跳过)",
+    "showWarnings": "显示 {count} 个警告",
+    "formatTitle": "预期格式：",
+    "csvFormat": "CSV: 前面,背面,例句,例句翻译",
+    "txtFormat": "TXT: 前面;背面;例句 (制表符、分号或逗号分隔)"
+  },
+  "preview": {
+    "title": "预览",
+    "cardCount": "{count} 张卡片",
+    "cardCountPlural": "{count} 张卡片",
+    "deckName": "卡组名称",
+    "deckNamePlaceholder": "我的语言卡组",
+    "clearAll": "全部清除",
+    "noCards": "还没有卡片",
+    "noCardsHint": "使用 AI 生成、手动输入或导入文件来添加卡片"
+  },
+  "cardItem": {
+    "frontPlaceholder": "前面 (词汇)",
+    "backPlaceholder": "背面 (翻译)",
+    "examplePlaceholder": "例句 (可选)",
+    "exampleTranslationPlaceholder": "例句翻译 (可选)",
+    "cancel": "取消",
+    "save": "保存"
+  },
+  "export": {
+    "button": "导出到 Anki",
+    "exporting": "导出中..."
+  },
+  "languages": {
+    "en": "英语",
+    "es": "西班牙语",
+    "fr": "法语",
+    "de": "德语",
+    "it": "意大利语",
+    "pt": "葡萄牙语",
+    "nl": "荷兰语",
+    "ru": "俄语",
+    "ja": "日语",
+    "ko": "韩语",
+    "zh": "中文",
+    "ar": "阿拉伯语",
+    "hi": "印地语",
+    "tr": "土耳其语",
+    "pl": "波兰语",
+    "vi": "越南语",
+    "th": "泰语",
+    "sv": "瑞典语",
+    "da": "丹麦语",
+    "no": "挪威语",
+    "fi": "芬兰语",
+    "el": "希腊语",
+    "he": "希伯来语",
+    "cs": "捷克语",
+    "ro": "罗马尼亚语",
+    "hu": "匈牙利语",
+    "id": "印度尼西亚语",
+    "ms": "马来语",
+    "uk": "乌克兰语"
+  },
+  "languageSelector": {
+    "uiLanguage": "UI 语言",
+    "targetLanguage": "学习语言:",
+    "selectLanguage": "选择语言"
+  }
+}

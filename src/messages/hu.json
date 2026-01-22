@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Deck Generator",
+    "subtitle": "Flashcard pakli készítés nyelvtanuláshoz",
+    "learning": "Tanulás:"
+  },
+  "input": {
+    "title": "Kártyák hozzáadása",
+    "tabs": {
+      "ai": "AI Generálás",
+      "manual": "Kézi",
+      "import": "Importálás"
+    }
+  },
+  "aiForm": {
+    "mode": "Mód",
+    "topic": "Téma",
+    "wordList": "Szólista",
+    "topicLabel": "Adjon meg egy témát (pl. \"étel és főzés\")",
+    "wordListLabel": "Adja meg a szavakat, egyet soronként",
+    "topicPlaceholder": "Adja meg a témát, pl. \"utazási szókincs\", \"üzleti kifejezések\", stb.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Generálandó kártyák száma",
+    "cards": "kártya",
+    "error": "Kérjük, adjon meg egy témát vagy szólistát",
+    "generating": "Generálás {language} nyelvből...",
+    "generate": "Kártyák generálása"
+  },
+  "manualForm": {
+    "termLabel": "Kifejezés (célnyelven)",
+    "termPlaceholder": "pl. hola",
+    "translationLabel": "Fordítás (angol)",
+    "translationPlaceholder": "pl. hello",
+    "exampleLabel": "Példamondatminta (opcionális)",
+    "examplePlaceholder": "pl. Hola! Como estas?",
+    "exampleTranslationLabel": "Példa fordítás (opcionális)",
+    "exampleTranslationPlaceholder": "pl. Hello! How are you?",
+    "required": "*",
+    "termError": "Kérjük, adja meg a kifejezést",
+    "translationError": "Kérjük, adja meg a fordítást",
+    "addCard": "Kártya hozzáadása"
+  },
+  "importForm": {
+    "uploadTitle": "Kattintson a CSV vagy TXT fájl feltöltéséhez",
+    "uploadHint": "Max 1MB. Formátum: elöl, hátul, példa (opcionális)",
+    "hasHeader": "A fájlnak fejlécsora van (első sor kihagyása)",
+    "fileSizeError": "A fájl mérete nem lehet nagyobb, mint 1MB",
+    "fileTypeError": "A fájlnak CSV vagy TXT típusúnak kell lennie",
+    "noCardsError": "Nincsenek érvényes flashcardok a fájlban",
+    "parseError": "Nem sikerült elemezni a fájlt. Ellenőrizze a formátumot.",
+    "imported": "{count} kártya importálva",
+    "skipped": "({count} kihagyva)",
+    "showWarnings": "{count} figyelmeztetés megjelenítése",
+    "formatTitle": "Várt formátum:",
+    "csvFormat": "CSV: elöl,hátul,példa,exampleTranslation",
+    "txtFormat": "TXT: elöl;hátul;példa (tab, pontosvessző vagy vessző által elválasztott)"
+  },
+  "preview": {
+    "title": "Előnézet",
+    "cardCount": "{count} kártya",
+    "cardCountPlural": "{count} kártya",
+    "deckName": "Pakli neve",
+    "deckNamePlaceholder": "Az én nyelvi paklim",
+    "clearAll": "Az összes törlése",
+    "noCards": "Még nincsenek kártyák",
+    "noCardsHint": "Kártyákat adhat hozzá AI generálással, kézi beírással vagy fájlimportálással"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Elöl (kifejezés)",
+    "backPlaceholder": "Hátul (fordítás)",
+    "examplePlaceholder": "Példamondatminta (opcionális)",
+    "exampleTranslationPlaceholder": "Példa fordítása (opcionális)",
+    "cancel": "Mégse",
+    "save": "Mentés"
+  },
+  "export": {
+    "button": "Exportálás Ankiba",
+    "exporting": "Exportálás..."
+  },
+  "languages": {
+    "en": "Angol",
+    "es": "Spanyol",
+    "fr": "Francia",
+    "de": "Német",
+    "it": "Olasz",
+    "pt": "Portugál",
+    "nl": "Holland",
+    "ru": "Orosz",
+    "ja": "Japán",
+    "ko": "Koreai",
+    "zh": "Kínai",
+    "ar": "Arab",
+    "hi": "Hindi",
+    "tr": "Török",
+    "pl": "Lengyel",
+    "vi": "Vietnami",
+    "th": "Thai",
+    "sv": "Svéd",
+    "da": "Dán",
+    "no": "Norvég",
+    "fi": "Finn",
+    "el": "Görög",
+    "he": "Héber",
+    "cs": "Cseh",
+    "ro": "Román",
+    "hu": "Magyar",
+    "id": "Indonéz",
+    "ms": "Maláj",
+    "uk": "Ukrán"
+  },
+  "languageSelector": {
+    "uiLanguage": "Felhasználói felület nyelve",
+    "targetLanguage": "Tanulás:",
+    "selectLanguage": "Válasszon nyelvet"
+  }
+}

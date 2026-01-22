@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki डेक जनरेटर",
+    "subtitle": "भाषा सीखने के लिए फ्लैशकार्ड डेक बनाएं",
+    "learning": "सीख रहे हैं:"
+  },
+  "input": {
+    "title": "कार्ड जोड़ें",
+    "tabs": {
+      "ai": "AI जेनरेट करें",
+      "manual": "मैनुअल",
+      "import": "आयात करें"
+    }
+  },
+  "aiForm": {
+    "mode": "मोड",
+    "topic": "विषय",
+    "wordList": "शब्द सूची",
+    "topicLabel": "एक विषय दर्ज करें (जैसे, \"खाना और खाना पकाना\")",
+    "wordListLabel": "शब्द दर्ज करें, प्रत्येक पंक्ति में एक",
+    "topicPlaceholder": "एक विषय दर्ज करें जैसे \"यात्रा शब्दावली\", \"व्यावसायिक शर्तें\", आदि।",
+    "wordListPlaceholder": "नमस्ते\nधन्यवाद\nकृपया\nअलविदा",
+    "cardCount": "जेनरेट करने के लिए कार्ड",
+    "cards": "कार्ड",
+    "error": "कृपया एक विषय या शब्द सूची दर्ज करें",
+    "generating": "{language} के लिए जेनरेट किया जा रहा है...",
+    "generate": "कार्ड जेनरेट करें"
+  },
+  "manualForm": {
+    "termLabel": "शब्द (लक्ष्य भाषा में)",
+    "termPlaceholder": "जैसे, नमस्ते",
+    "translationLabel": "अनुवाद (अंग्रेजी)",
+    "translationPlaceholder": "जैसे, hello",
+    "exampleLabel": "उदाहरण वाक्य (वैकल्पिक)",
+    "examplePlaceholder": "जैसे, नमस्ते! आप कैसे हैं?",
+    "exampleTranslationLabel": "उदाहरण अनुवाद (वैकल्पिक)",
+    "exampleTranslationPlaceholder": "जैसे, Hello! How are you?",
+    "required": "*",
+    "termError": "कृपया शब्द दर्ज करें",
+    "translationError": "कृपया अनुवाद दर्ज करें",
+    "addCard": "कार्ड जोड़ें"
+  },
+  "importForm": {
+    "uploadTitle": "CSV या TXT फ़ाइल अपलोड करने के लिए क्लिक करें",
+    "uploadHint": "अधिकतम 1MB। प्रारूप: front, back, example (वैकल्पिक)",
+    "hasHeader": "फ़ाइल में हेडर पंक्ति है (पहली पंक्ति छोड़ें)",
+    "fileSizeError": "फ़ाइल 1MB से कम होनी चाहिए",
+    "fileTypeError": "फ़ाइल CSV या TXT होनी चाहिए",
+    "noCardsError": "फ़ाइल में कोई वैध फ्लैशकार्ड नहीं मिले",
+    "parseError": "फ़ाइल को पार्स नहीं किया जा सका। प्रारूप जांचें।",
+    "imported": "{count} कार्ड आयात किए गए",
+    "skipped": "({count} छोड़े गए)",
+    "showWarnings": "{count} चेतावनी दिखाएं",
+    "formatTitle": "अपेक्षित प्रारूप:",
+    "csvFormat": "CSV: front,back,example,exampleTranslation",
+    "txtFormat": "TXT: front;back;example (tab, semicolon, या comma से अलग)"
+  },
+  "preview": {
+    "title": "पूर्वावलोकन",
+    "cardCount": "{count} कार्ड",
+    "cardCountPlural": "{count} कार्ड",
+    "deckName": "डेक का नाम",
+    "deckNamePlaceholder": "मेरा भाषा डेक",
+    "clearAll": "सभी साफ करें",
+    "noCards": "अभी तक कोई कार्ड नहीं",
+    "noCardsHint": "AI जेनरेशन, मैनुअल प्रविष्टि, या फ़ाइल आयात का उपयोग करके कार्ड जोड़ें"
+  },
+  "cardItem": {
+    "frontPlaceholder": "सामने (शब्द)",
+    "backPlaceholder": "पीछे (अनुवाद)",
+    "examplePlaceholder": "उदाहरण वाक्य (वैकल्पिक)",
+    "exampleTranslationPlaceholder": "उदाहरण अनुवाद (वैकल्पिक)",
+    "cancel": "रद्द करें",
+    "save": "सहेजें"
+  },
+  "export": {
+    "button": "Anki को निर्यात करें",
+    "exporting": "निर्यात किया जा रहा है..."
+  },
+  "languages": {
+    "en": "अंग्रेजी",
+    "es": "स्पेनिश",
+    "fr": "फ्रेंच",
+    "de": "जर्मन",
+    "it": "इतालवी",
+    "pt": "पुर्तगाली",
+    "nl": "डच",
+    "ru": "रूसी",
+    "ja": "जापानी",
+    "ko": "कोरियाई",
+    "zh": "चीनी",
+    "ar": "अरबी",
+    "hi": "हिंदी",
+    "tr": "तुर्की",
+    "pl": "पोलिश",
+    "vi": "वियतनामी",
+    "th": "थाई",
+    "sv": "स्वीडिश",
+    "da": "डेनिश",
+    "no": "नॉर्वेजियन",
+    "fi": "फिनिश",
+    "el": "ग्रीक",
+    "he": "हिब्रू",
+    "cs": "चेक",
+    "ro": "रोमानियन",
+    "hu": "हंगेरियन",
+    "id": "इंडोनेशियाई",
+    "ms": "मलय",
+    "uk": "यूक्रेनियन"
+  },
+  "languageSelector": {
+    "uiLanguage": "UI भाषा",
+    "targetLanguage": "सीख रहे हैं:",
+    "selectLanguage": "भाषा चुनें"
+  }
+}

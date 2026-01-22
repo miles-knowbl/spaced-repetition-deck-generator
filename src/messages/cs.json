@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Generátor Anki Balíčků",
+    "subtitle": "Vytvářejte sady flashkaret pro výuku jazyků",
+    "learning": "Učení:"
+  },
+  "input": {
+    "title": "Přidat Karty",
+    "tabs": {
+      "ai": "AI Generování",
+      "manual": "Ruční",
+      "import": "Import"
+    }
+  },
+  "aiForm": {
+    "mode": "Režim",
+    "topic": "Téma",
+    "wordList": "Seznam Slov",
+    "topicLabel": "Zadejte téma (např. \"potraviny a vaření\")",
+    "wordListLabel": "Zadejte slova, jedno na řádek",
+    "topicPlaceholder": "Zadejte téma jako \"cestovní slovní zásoba\", \"obchodní termíny\" atd.",
+    "wordListPlaceholder": "ahoj\ndík\nprosím\nna shledanou",
+    "cardCount": "Počet karet k vygenerování",
+    "cards": "karty",
+    "error": "Prosím zadejte téma nebo seznam slov",
+    "generating": "Generování pro {language}...",
+    "generate": "Vygenerovat Karty"
+  },
+  "manualForm": {
+    "termLabel": "Termín (v cílovém jazyce)",
+    "termPlaceholder": "např. ahoj",
+    "translationLabel": "Překlad (Angličtina)",
+    "translationPlaceholder": "např. hello",
+    "exampleLabel": "Příklad věty (volitelné)",
+    "examplePlaceholder": "např. Ahoj! Jak se máš?",
+    "exampleTranslationLabel": "Překlad příkladu (volitelné)",
+    "exampleTranslationPlaceholder": "např. Hello! How are you?",
+    "required": "*",
+    "termError": "Prosím zadejte termín",
+    "translationError": "Prosím zadejte překlad",
+    "addCard": "Přidat Kartu"
+  },
+  "importForm": {
+    "uploadTitle": "Kliknutím nahrajte soubor CSV nebo TXT",
+    "uploadHint": "Max 1MB. Formát: přední strana, zadní strana, příklad (volitelné)",
+    "hasHeader": "Soubor má řádek záhlaví (přeskočit první řádek)",
+    "fileSizeError": "Soubor musí být menší než 1MB",
+    "fileTypeError": "Soubor musí být CSV nebo TXT",
+    "noCardsError": "V souboru nebyly nalezeny žádné platné flashkarty",
+    "parseError": "Soubor nelze analyzovat. Zkontrolujte formát.",
+    "imported": "Importováno {count} karet",
+    "skipped": "({count} přeskočeno)",
+    "showWarnings": "Zobrazit {count} upozornění",
+    "formatTitle": "Očekávaný formát:",
+    "csvFormat": "CSV: přední,zadní,příklad,překlad příkladu",
+    "txtFormat": "TXT: přední;zadní;příklad (tabulátor, středník nebo čárka oddělená)"
+  },
+  "preview": {
+    "title": "Náhled",
+    "cardCount": "{count} karta",
+    "cardCountPlural": "{count} karet",
+    "deckName": "Název Balíčku",
+    "deckNamePlaceholder": "Můj Jazykový Balíček",
+    "clearAll": "Vymazat Vše",
+    "noCards": "Zatím žádné karty",
+    "noCardsHint": "Přidejte karty pomocí AI generování, ručního zadání nebo importu souboru"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Přední (termín)",
+    "backPlaceholder": "Zadní (překlad)",
+    "examplePlaceholder": "Příklad věty (volitelné)",
+    "exampleTranslationPlaceholder": "Překlad příkladu (volitelné)",
+    "cancel": "Zrušit",
+    "save": "Uložit"
+  },
+  "export": {
+    "button": "Exportovat do Anki",
+    "exporting": "Exportování..."
+  },
+  "languages": {
+    "en": "Angličtina",
+    "es": "Španělština",
+    "fr": "Francouzština",
+    "de": "Němčina",
+    "it": "Italština",
+    "pt": "Portugalština",
+    "nl": "Holandština",
+    "ru": "Ruština",
+    "ja": "Japonština",
+    "ko": "Korejština",
+    "zh": "Čínština",
+    "ar": "Arabština",
+    "hi": "Hindština",
+    "tr": "Turečtina",
+    "pl": "Polština",
+    "vi": "Vietnamština",
+    "th": "Thajština",
+    "sv": "Švédština",
+    "da": "Dánština",
+    "no": "Norština",
+    "fi": "Finština",
+    "el": "Řečtina",
+    "he": "Hebrejština",
+    "cs": "Čeština",
+    "ro": "Rumunština",
+    "hu": "Maďarština",
+    "id": "Indonéština",
+    "ms": "Malajština",
+    "uk": "Ukrajinština"
+  },
+  "languageSelector": {
+    "uiLanguage": "Jazyk Rozhraní",
+    "targetLanguage": "Učení:",
+    "selectLanguage": "Vyberte jazyk"
+  }
+}

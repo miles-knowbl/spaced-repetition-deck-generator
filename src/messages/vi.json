@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Trình tạo Bộ thẻ Anki",
+    "subtitle": "Tạo bộ thẻ ghi nhớ để học ngôn ngữ",
+    "learning": "Đang học:"
+  },
+  "input": {
+    "title": "Thêm Thẻ",
+    "tabs": {
+      "ai": "Tạo bằng AI",
+      "manual": "Thêm thủ công",
+      "import": "Nhập khẩu"
+    }
+  },
+  "aiForm": {
+    "mode": "Chế độ",
+    "topic": "Chủ đề",
+    "wordList": "Danh sách từ",
+    "topicLabel": "Nhập một chủ đề (ví dụ: \"ẩm thực và nấu ăn\")",
+    "wordListLabel": "Nhập các từ, mỗi từ một dòng",
+    "topicPlaceholder": "Nhập một chủ đề như \"từ vựng du lịch\", \"các thuật ngữ kinh doanh\", v.v.",
+    "wordListPlaceholder": "xin chào\ncảm ơn\nvui lòng\ntạm biệt",
+    "cardCount": "Số thẻ cần tạo",
+    "cards": "thẻ",
+    "error": "Vui lòng nhập một chủ đề hoặc danh sách từ",
+    "generating": "Đang tạo cho {language}...",
+    "generate": "Tạo Thẻ"
+  },
+  "manualForm": {
+    "termLabel": "Thuật ngữ (bằng ngôn ngữ đích)",
+    "termPlaceholder": "ví dụ: xin chào",
+    "translationLabel": "Bản dịch (Tiếng Anh)",
+    "translationPlaceholder": "ví dụ: hello",
+    "exampleLabel": "Câu ví dụ (tùy chọn)",
+    "examplePlaceholder": "ví dụ: Xin chào! Bạn khỏe không?",
+    "exampleTranslationLabel": "Bản dịch của câu ví dụ (tùy chọn)",
+    "exampleTranslationPlaceholder": "ví dụ: Hello! How are you?",
+    "required": "*",
+    "termError": "Vui lòng nhập thuật ngữ",
+    "translationError": "Vui lòng nhập bản dịch",
+    "addCard": "Thêm Thẻ"
+  },
+  "importForm": {
+    "uploadTitle": "Nhấp để tải lên tệp CSV hoặc TXT",
+    "uploadHint": "Tối đa 1MB. Định dạng: mặt trước, mặt sau, ví dụ (tùy chọn)",
+    "hasHeader": "Tệp có dòng tiêu đề (bỏ qua dòng đầu tiên)",
+    "fileSizeError": "Tệp phải dưới 1MB",
+    "fileTypeError": "Tệp phải là CSV hoặc TXT",
+    "noCardsError": "Không tìm thấy thẻ ghi nhớ hợp lệ nào trong tệp",
+    "parseError": "Không thể phân tích tệp. Kiểm tra định dạng.",
+    "imported": "Đã nhập {count} thẻ",
+    "skipped": "({count} bỏ qua)",
+    "showWarnings": "Hiển thị {count} cảnh báo",
+    "formatTitle": "Định dạng dự kiến:",
+    "csvFormat": "CSV: mặt trước,mặt sau,ví dụ,bản dịch ví dụ",
+    "txtFormat": "TXT: mặt trước;mặt sau;ví dụ (tab, dấu chấm phẩy hoặc dấu phẩy)"
+  },
+  "preview": {
+    "title": "Xem trước",
+    "cardCount": "{count} thẻ",
+    "cardCountPlural": "{count} thẻ",
+    "deckName": "Tên Bộ thẻ",
+    "deckNamePlaceholder": "Bộ thẻ Ngôn ngữ của tôi",
+    "clearAll": "Xóa Tất cả",
+    "noCards": "Chưa có thẻ nào",
+    "noCardsHint": "Thêm thẻ bằng cách tạo AI, thêm thủ công hoặc nhập tệp"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Mặt trước (thuật ngữ)",
+    "backPlaceholder": "Mặt sau (bản dịch)",
+    "examplePlaceholder": "Câu ví dụ (tùy chọn)",
+    "exampleTranslationPlaceholder": "Bản dịch ví dụ (tùy chọn)",
+    "cancel": "Hủy",
+    "save": "Lưu"
+  },
+  "export": {
+    "button": "Xuất sang Anki",
+    "exporting": "Đang xuất..."
+  },
+  "languages": {
+    "en": "Tiếng Anh",
+    "es": "Tiếng Tây Ban Nha",
+    "fr": "Tiếng Pháp",
+    "de": "Tiếng Đức",
+    "it": "Tiếng Ý",
+    "pt": "Tiếng Bồ Đào Nha",
+    "nl": "Tiếng Hà Lan",
+    "ru": "Tiếng Nga",
+    "ja": "Tiếng Nhật",
+    "ko": "Tiếng Hàn",
+    "zh": "Tiếng Trung",
+    "ar": "Tiếng Ả Rập",
+    "hi": "Tiếng Hindi",
+    "tr": "Tiếng Thổ Nhĩ Kỳ",
+    "pl": "Tiếng Ba Lan",
+    "vi": "Tiếng Việt",
+    "th": "Tiếng Thái",
+    "sv": "Tiếng Thụy Điển",
+    "da": "Tiếng Đan Mạch",
+    "no": "Tiếng Na Uy",
+    "fi": "Tiếng Phần Lan",
+    "el": "Tiếng Hy Lạp",
+    "he": "Tiếng Do Thái",
+    "cs": "Tiếng Séc",
+    "ro": "Tiếng Romania",
+    "hu": "Tiếng Hungary",
+    "id": "Tiếng Indonesia",
+    "ms": "Tiếng Mã Lai",
+    "uk": "Tiếng Ukraina"
+  },
+  "languageSelector": {
+    "uiLanguage": "Ngôn ngữ Giao diện",
+    "targetLanguage": "Đang học:",
+    "selectLanguage": "Chọn ngôn ngữ"
+  }
+}

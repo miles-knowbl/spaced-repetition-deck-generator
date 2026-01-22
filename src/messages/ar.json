@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "منشئ سطح ذاكرة Anki",
+    "subtitle": "إنشاء أوراق بطاقات فلاش لتعلم اللغات",
+    "learning": "التعلم:"
+  },
+  "input": {
+    "title": "إضافة بطاقات",
+    "tabs": {
+      "ai": "إنشاء بواسطة الذكاء الاصطناعي",
+      "manual": "إضافة يدوية",
+      "import": "استيراد"
+    }
+  },
+  "aiForm": {
+    "mode": "الوضع",
+    "topic": "الموضوع",
+    "wordList": "قائمة الكلمات",
+    "topicLabel": "أدخل موضوعًا (مثل \"الطعام والطهي\")",
+    "wordListLabel": "أدخل الكلمات، واحدة في كل سطر",
+    "topicPlaceholder": "أدخل موضوعًا مثل \"مفردات السفر\" أو \"المصطلحات التجارية\" وما إلى ذلك.",
+    "wordListPlaceholder": "مرحبا\nشكرا\nمن فضلك\nوداعا",
+    "cardCount": "عدد البطاقات المراد إنشاؤها",
+    "cards": "بطاقات",
+    "error": "يرجى إدخال موضوع أو قائمة كلمات",
+    "generating": "جاري الإنشاء بـ {language}...",
+    "generate": "إنشاء بطاقات"
+  },
+  "manualForm": {
+    "termLabel": "المصطلح (باللغة المستهدفة)",
+    "termPlaceholder": "مثل: مرحبا",
+    "translationLabel": "الترجمة (إلى الإنجليزية)",
+    "translationPlaceholder": "مثل: hello",
+    "exampleLabel": "جملة مثال (اختيارية)",
+    "examplePlaceholder": "مثل: مرحبا! كيف حالك؟",
+    "exampleTranslationLabel": "ترجمة المثال (اختيارية)",
+    "exampleTranslationPlaceholder": "مثل: Hello! How are you?",
+    "required": "*",
+    "termError": "يرجى إدخال المصطلح",
+    "translationError": "يرجى إدخال الترجمة",
+    "addCard": "إضافة بطاقة"
+  },
+  "importForm": {
+    "uploadTitle": "انقر لتحميل ملف CSV أو TXT",
+    "uploadHint": "الحد الأقصى 1 ميجابايت. الصيغة: الأمام، الخلف، المثال (اختيارية)",
+    "hasHeader": "الملف يحتوي على صف رأس (تخطي الصف الأول)",
+    "fileSizeError": "يجب أن يكون الملف أقل من 1 ميجابايت",
+    "fileTypeError": "يجب أن يكون الملف من نوع CSV أو TXT",
+    "noCardsError": "لم يتم العثور على بطاقات فلاش صحيحة في الملف",
+    "parseError": "لا يمكن تحليل الملف. تحقق من الصيغة.",
+    "imported": "تم استيراد {count} بطاقات",
+    "skipped": "({count} تم تخطيها)",
+    "showWarnings": "عرض {count} تحذير(ات)",
+    "formatTitle": "الصيغة المتوقعة:",
+    "csvFormat": "CSV: الأمام، الخلف، المثال، ترجمة المثال",
+    "txtFormat": "TXT: الأمام؛ الخلف؛ المثال (مفصول بعلامة تبويب أو فاصلة منقوطة أو فاصلة)"
+  },
+  "preview": {
+    "title": "معاينة",
+    "cardCount": "{count} بطاقة",
+    "cardCountPlural": "{count} بطاقة",
+    "deckName": "اسم السطح",
+    "deckNamePlaceholder": "سطح اللغة الخاص بي",
+    "clearAll": "حذف الكل",
+    "noCards": "لا توجد بطاقات حتى الآن",
+    "noCardsHint": "أضف بطاقات باستخدام إنشاء الذكاء الاصطناعي أو الإدخال اليدوي أو استيراد الملفات"
+  },
+  "cardItem": {
+    "frontPlaceholder": "الأمام (المصطلح)",
+    "backPlaceholder": "الخلف (الترجمة)",
+    "examplePlaceholder": "جملة مثال (اختيارية)",
+    "exampleTranslationPlaceholder": "ترجمة المثال (اختيارية)",
+    "cancel": "إلغاء",
+    "save": "حفظ"
+  },
+  "export": {
+    "button": "تصدير إلى Anki",
+    "exporting": "جاري التصدير..."
+  },
+  "languages": {
+    "en": "الإنجليزية",
+    "es": "الإسبانية",
+    "fr": "الفرنسية",
+    "de": "الألمانية",
+    "it": "الإيطالية",
+    "pt": "البرتغالية",
+    "nl": "الهولندية",
+    "ru": "الروسية",
+    "ja": "اليابانية",
+    "ko": "الكورية",
+    "zh": "الصينية",
+    "ar": "العربية",
+    "hi": "الهندية",
+    "tr": "التركية",
+    "pl": "البولندية",
+    "vi": "الفيتنامية",
+    "th": "التايلاندية",
+    "sv": "السويدية",
+    "da": "الدانماركية",
+    "no": "النرويجية",
+    "fi": "الفنلندية",
+    "el": "اليونانية",
+    "he": "العبرية",
+    "cs": "التشيكية",
+    "ro": "الرومانية",
+    "hu": "المجرية",
+    "id": "الإندونيسية",
+    "ms": "الملايوية",
+    "uk": "الأوكرانية"
+  },
+  "languageSelector": {
+    "uiLanguage": "لغة الواجهة",
+    "targetLanguage": "التعلم:",
+    "selectLanguage": "اختر اللغة"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Kortstokk Generator",
+    "subtitle": "Lag flashkort-stokker for språkopplæring",
+    "learning": "Lærer:"
+  },
+  "input": {
+    "title": "Legg til kort",
+    "tabs": {
+      "ai": "AI Generer",
+      "manual": "Manuell",
+      "import": "Importer"
+    }
+  },
+  "aiForm": {
+    "mode": "Modus",
+    "topic": "Emne",
+    "wordList": "Ordliste",
+    "topicLabel": "Skriv inn et emne (f.eks. \"mat og matlaging\")",
+    "wordListLabel": "Skriv inn ord, ett per linje",
+    "topicPlaceholder": "Skriv inn et emne som \"reisevokabular\", \"forretningsbegreper\", osv.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Kort å generere",
+    "cards": "kort",
+    "error": "Vennligst skriv inn et emne eller en ordliste",
+    "generating": "Genererer for {language}...",
+    "generate": "Generer kort"
+  },
+  "manualForm": {
+    "termLabel": "Begrep (på målspråket)",
+    "termPlaceholder": "f.eks. hola",
+    "translationLabel": "Oversettelse (norsk)",
+    "translationPlaceholder": "f.eks. hallo",
+    "exampleLabel": "Eksempelsetning (valgfritt)",
+    "examplePlaceholder": "f.eks. Hola! Como estas?",
+    "exampleTranslationLabel": "Eksempel oversettelse (valgfritt)",
+    "exampleTranslationPlaceholder": "f.eks. Hallo! Hvordan går det?",
+    "required": "*",
+    "termError": "Vennligst skriv inn begrepet",
+    "translationError": "Vennligst skriv inn oversettelsen",
+    "addCard": "Legg til kort"
+  },
+  "importForm": {
+    "uploadTitle": "Klikk for å laste opp CSV eller TXT fil",
+    "uploadHint": "Maks 1MB. Format: forside, bakside, eksempel (valgfritt)",
+    "hasHeader": "Filen har overskriftsrad (hopp over første rad)",
+    "fileSizeError": "Filen må være mindre enn 1MB",
+    "fileTypeError": "Filen må være CSV eller TXT",
+    "noCardsError": "Ingen gyldige flashkort funnet i filen",
+    "parseError": "Kunne ikke analysere filen. Sjekk formatet.",
+    "imported": "Importerte {count} kort",
+    "skipped": "({count} hoppet over)",
+    "showWarnings": "Vis {count} advarsel(er)",
+    "formatTitle": "Forventet format:",
+    "csvFormat": "CSV: forside,bakside,eksempel,eksempelOversettelse",
+    "txtFormat": "TXT: forside;bakside;eksempel (tab, semikolon eller komma separert)"
+  },
+  "preview": {
+    "title": "Forhåndsvisning",
+    "cardCount": "{count} kort",
+    "cardCountPlural": "{count} kort",
+    "deckName": "Kortstokk navn",
+    "deckNamePlaceholder": "Min språkkortbok",
+    "clearAll": "Tøm alt",
+    "noCards": "Ingen kort ennå",
+    "noCardsHint": "Legg til kort ved hjelp av AI-generering, manuell oppføring eller filimport"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Forside (begrep)",
+    "backPlaceholder": "Bakside (oversettelse)",
+    "examplePlaceholder": "Eksempelsetning (valgfritt)",
+    "exampleTranslationPlaceholder": "Eksempel oversettelse (valgfritt)",
+    "cancel": "Avbryt",
+    "save": "Lagre"
+  },
+  "export": {
+    "button": "Eksporter til Anki",
+    "exporting": "Eksporterer..."
+  },
+  "languages": {
+    "en": "Engelsk",
+    "es": "Spansk",
+    "fr": "Fransk",
+    "de": "Tysk",
+    "it": "Italiensk",
+    "pt": "Portugisisk",
+    "nl": "Nederlandsk",
+    "ru": "Russisk",
+    "ja": "Japansk",
+    "ko": "Koreansk",
+    "zh": "Kinesisk",
+    "ar": "Arabisk",
+    "hi": "Hindi",
+    "tr": "Tyrkisk",
+    "pl": "Polsk",
+    "vi": "Vietnamesisk",
+    "th": "Thai",
+    "sv": "Svensk",
+    "da": "Dansk",
+    "no": "Norsk",
+    "fi": "Finsk",
+    "el": "Gresk",
+    "he": "Hebraisk",
+    "cs": "Tsjekkisk",
+    "ro": "Rumensk",
+    "hu": "Ungarsk",
+    "id": "Indonesisk",
+    "ms": "Malayisk",
+    "uk": "Ukrainsk"
+  },
+  "languageSelector": {
+    "uiLanguage": "Grensesnittspråk",
+    "targetLanguage": "Lærer:",
+    "selectLanguage": "Velg språk"
+  }
+}

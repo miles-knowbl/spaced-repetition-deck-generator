@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Pembuat Deck Anki",
+    "subtitle": "Buat deck kartu kilat untuk pembelajaran bahasa",
+    "learning": "Belajar:"
+  },
+  "input": {
+    "title": "Tambah Kartu",
+    "tabs": {
+      "ai": "Buat dengan AI",
+      "manual": "Manual",
+      "import": "Impor"
+    }
+  },
+  "aiForm": {
+    "mode": "Mode",
+    "topic": "Topik",
+    "wordList": "Daftar Kata",
+    "topicLabel": "Masukkan topik (misalnya, \"makanan dan memasak\")",
+    "wordListLabel": "Masukkan kata, satu per baris",
+    "topicPlaceholder": "Masukkan topik seperti \"kosakata perjalanan\", \"istilah bisnis\", dll.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Jumlah kartu untuk dibuat",
+    "cards": "kartu",
+    "error": "Harap masukkan topik atau daftar kata",
+    "generating": "Membuat untuk {language}...",
+    "generate": "Buat Kartu"
+  },
+  "manualForm": {
+    "termLabel": "Istilah (dalam bahasa target)",
+    "termPlaceholder": "misalnya, hola",
+    "translationLabel": "Terjemahan (Bahasa Inggris)",
+    "translationPlaceholder": "misalnya, hello",
+    "exampleLabel": "Contoh kalimat (opsional)",
+    "examplePlaceholder": "misalnya, Hola! Como estas?",
+    "exampleTranslationLabel": "Terjemahan contoh (opsional)",
+    "exampleTranslationPlaceholder": "misalnya, Hello! How are you?",
+    "required": "*",
+    "termError": "Harap masukkan istilahnya",
+    "translationError": "Harap masukkan terjemahannya",
+    "addCard": "Tambah Kartu"
+  },
+  "importForm": {
+    "uploadTitle": "Klik untuk mengunggah file CSV atau TXT",
+    "uploadHint": "Maksimal 1MB. Format: depan, belakang, contoh (opsional)",
+    "hasHeader": "File memiliki baris header (lewati baris pertama)",
+    "fileSizeError": "File harus di bawah 1MB",
+    "fileTypeError": "File harus CSV atau TXT",
+    "noCardsError": "Tidak ada kartu kilat yang valid ditemukan di file",
+    "parseError": "Tidak dapat menguraikan file. Periksa format.",
+    "imported": "Diimpor {count} kartu",
+    "skipped": "({count} dilewati)",
+    "showWarnings": "Tampilkan {count} peringatan",
+    "formatTitle": "Format yang diharapkan:",
+    "csvFormat": "CSV: depan,belakang,contoh,terjemahanContoh",
+    "txtFormat": "TXT: depan;belakang;contoh (dipisahkan dengan tab, titik koma, atau koma)"
+  },
+  "preview": {
+    "title": "Pratinjau",
+    "cardCount": "{count} kartu",
+    "cardCountPlural": "{count} kartu",
+    "deckName": "Nama Deck",
+    "deckNamePlaceholder": "Deck Bahasa Saya",
+    "clearAll": "Hapus Semua",
+    "noCards": "Tidak ada kartu",
+    "noCardsHint": "Tambahkan kartu menggunakan pembuatan AI, input manual, atau impor file"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Depan (istilah)",
+    "backPlaceholder": "Belakang (terjemahan)",
+    "examplePlaceholder": "Contoh kalimat (opsional)",
+    "exampleTranslationPlaceholder": "Terjemahan contoh (opsional)",
+    "cancel": "Batalkan",
+    "save": "Simpan"
+  },
+  "export": {
+    "button": "Ekspor ke Anki",
+    "exporting": "Mengekspor..."
+  },
+  "languages": {
+    "en": "Bahasa Inggris",
+    "es": "Bahasa Spanyol",
+    "fr": "Bahasa Prancis",
+    "de": "Bahasa Jerman",
+    "it": "Bahasa Italia",
+    "pt": "Bahasa Portugis",
+    "nl": "Bahasa Belanda",
+    "ru": "Bahasa Rusia",
+    "ja": "Bahasa Jepang",
+    "ko": "Bahasa Korea",
+    "zh": "Bahasa Mandarin",
+    "ar": "Bahasa Arab",
+    "hi": "Bahasa Hindi",
+    "tr": "Bahasa Turki",
+    "pl": "Bahasa Polandia",
+    "vi": "Bahasa Vietnam",
+    "th": "Bahasa Thailand",
+    "sv": "Bahasa Swedia",
+    "da": "Bahasa Denmark",
+    "no": "Bahasa Norwegia",
+    "fi": "Bahasa Finlandia",
+    "el": "Bahasa Yunani",
+    "he": "Bahasa Ibrani",
+    "cs": "Bahasa Cekhia",
+    "ro": "Bahasa Romania",
+    "hu": "Bahasa Hungaria",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "uk": "Bahasa Ukraina"
+  },
+  "languageSelector": {
+    "uiLanguage": "Bahasa Antarmuka",
+    "targetLanguage": "Belajar:",
+    "selectLanguage": "Pilih bahasa"
+  }
+}

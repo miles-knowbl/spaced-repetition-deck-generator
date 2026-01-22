@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Generator de Pachete Anki",
+    "subtitle": "Creați pachete de cartonașe pentru învățarea limbilor",
+    "learning": "Limba în curs de studiu:"
+  },
+  "input": {
+    "title": "Adăugați Cartonașe",
+    "tabs": {
+      "ai": "Generare cu IA",
+      "manual": "Manual",
+      "import": "Importare"
+    }
+  },
+  "aiForm": {
+    "mode": "Mod",
+    "topic": "Subiect",
+    "wordList": "Lista de Cuvinte",
+    "topicLabel": "Introduceți un subiect (ex: \"mâncare și gătit\")",
+    "wordListLabel": "Introduceți cuvinte, câte unul pe linie",
+    "topicPlaceholder": "Introduceți un subiect ca \"vocabular de călătorie\", \"termeni de afaceri\", etc.",
+    "wordListPlaceholder": "salut\nmulțumesc\nte rog\nadiós",
+    "cardCount": "Cartonașe de generat",
+    "cards": "cartonașe",
+    "error": "Vă rog introduceți un subiect sau o listă de cuvinte",
+    "generating": "Se generează pentru {language}...",
+    "generate": "Generează Cartonașe"
+  },
+  "manualForm": {
+    "termLabel": "Termen (în limba țintă)",
+    "termPlaceholder": "ex: salut",
+    "translationLabel": "Traducere (Engleză)",
+    "translationPlaceholder": "ex: hello",
+    "exampleLabel": "Propoziție de exemplu (opțional)",
+    "examplePlaceholder": "ex: Salut! Cum ești?",
+    "exampleTranslationLabel": "Traducerea exemplului (opțional)",
+    "exampleTranslationPlaceholder": "ex: Hello! How are you?",
+    "required": "*",
+    "termError": "Vă rog introduceți termenul",
+    "translationError": "Vă rog introduceți traducerea",
+    "addCard": "Adăugați Cartonasu"
+  },
+  "importForm": {
+    "uploadTitle": "Faceți clic pentru a încărca un fișier CSV sau TXT",
+    "uploadHint": "Max 1MB. Format: front, back, example (opțional)",
+    "hasHeader": "Fișierul are rând antet (omiteți primul rând)",
+    "fileSizeError": "Fișierul trebuie să fie sub 1MB",
+    "fileTypeError": "Fișierul trebuie să fie CSV sau TXT",
+    "noCardsError": "Nu au fost găsite cartonașe valide în fișier",
+    "parseError": "Nu s-a putut analiza fișierul. Verificați formatul.",
+    "imported": "Au fost importate {count} cartonașe",
+    "skipped": "({count} omise)",
+    "showWarnings": "Arătați {count} avertisment(e)",
+    "formatTitle": "Format așteptat:",
+    "csvFormat": "CSV: front,back,example,exampleTranslation",
+    "txtFormat": "TXT: front;back;example (separat prin tab, punct și virgulă, sau virgulă)"
+  },
+  "preview": {
+    "title": "Previzualizare",
+    "cardCount": "{count} cartonaș",
+    "cardCountPlural": "{count} cartonașe",
+    "deckName": "Nume Pachet",
+    "deckNamePlaceholder": "Pachetul Meu de Limbă",
+    "clearAll": "Ștergeți Tot",
+    "noCards": "Nici un cartonaș încă",
+    "noCardsHint": "Adăugați cartonașe folosind generarea cu IA, intrare manuală, sau importare din fișier"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Față (termen)",
+    "backPlaceholder": "Spate (traducere)",
+    "examplePlaceholder": "Propoziție de exemplu (opțional)",
+    "exampleTranslationPlaceholder": "Traducerea exemplului (opțional)",
+    "cancel": "Anulare",
+    "save": "Salvare"
+  },
+  "export": {
+    "button": "Exportă în Anki",
+    "exporting": "Se exportă..."
+  },
+  "languages": {
+    "en": "Engleză",
+    "es": "Spaniolă",
+    "fr": "Franceză",
+    "de": "Germană",
+    "it": "Italiană",
+    "pt": "Portugheză",
+    "nl": "Olandeză",
+    "ru": "Rusă",
+    "ja": "Japoneză",
+    "ko": "Coreeană",
+    "zh": "Chineză",
+    "ar": "Arabă",
+    "hi": "Hindă",
+    "tr": "Turcă",
+    "pl": "Poloneză",
+    "vi": "Vietnameză",
+    "th": "Tailandeză",
+    "sv": "Suedeză",
+    "da": "Daneză",
+    "no": "Norvegiană",
+    "fi": "Finlandeză",
+    "el": "Greacă",
+    "he": "Ebraică",
+    "cs": "Cehă",
+    "ro": "Română",
+    "hu": "Maghiară",
+    "id": "Indoneziană",
+    "ms": "Malaeză",
+    "uk": "Ucraineană"
+  },
+  "languageSelector": {
+    "uiLanguage": "Limba Interfeței",
+    "targetLanguage": "Limba în curs de studiu:",
+    "selectLanguage": "Selectați limba"
+  }
+}

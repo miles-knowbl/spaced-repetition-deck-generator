@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Kortlek Generator",
+    "subtitle": "Skapa kortlekar för språkinlärning",
+    "learning": "Läser:"
+  },
+  "input": {
+    "title": "Lägg till kort",
+    "tabs": {
+      "ai": "AI Generera",
+      "manual": "Manuell",
+      "import": "Importera"
+    }
+  },
+  "aiForm": {
+    "mode": "Läge",
+    "topic": "Ämne",
+    "wordList": "Ordlista",
+    "topicLabel": "Ange ett ämne (t.ex. \"mat och matlagning\")",
+    "wordListLabel": "Ange ord, ett per rad",
+    "topicPlaceholder": "Ange ett ämne som \"reseordförråd\", \"affärstermer\", etc.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Antal kort att generera",
+    "cards": "kort",
+    "error": "Vänligen ange ett ämne eller ordlista",
+    "generating": "Genererar för {language}...",
+    "generate": "Generera kort"
+  },
+  "manualForm": {
+    "termLabel": "Term (på målspråk)",
+    "termPlaceholder": "t.ex. hola",
+    "translationLabel": "Översättning (engelska)",
+    "translationPlaceholder": "t.ex. hello",
+    "exampleLabel": "Exempelmening (valfritt)",
+    "examplePlaceholder": "t.ex. Hola! Como estas?",
+    "exampleTranslationLabel": "Exempelöversättning (valfritt)",
+    "exampleTranslationPlaceholder": "t.ex. Hello! How are you?",
+    "required": "*",
+    "termError": "Vänligen ange termen",
+    "translationError": "Vänligen ange översättningen",
+    "addCard": "Lägg till kort"
+  },
+  "importForm": {
+    "uploadTitle": "Klicka för att ladda upp CSV- eller TXT-fil",
+    "uploadHint": "Max 1 MB. Format: framsida, baksida, exempel (valfritt)",
+    "hasHeader": "Filen har rubrikrad (hoppa över första raden)",
+    "fileSizeError": "Filen måste vara mindre än 1 MB",
+    "fileTypeError": "Filen måste vara CSV eller TXT",
+    "noCardsError": "Inga giltiga flashcards hittades i filen",
+    "parseError": "Kunde inte tolka filen. Kontrollera formatet.",
+    "imported": "Importerade {count} kort",
+    "skipped": "({count} överhoppade)",
+    "showWarnings": "Visa {count} varning(ar)",
+    "formatTitle": "Förväntat format:",
+    "csvFormat": "CSV: framsida,baksida,exempel,exempelöversättning",
+    "txtFormat": "TXT: framsida;baksida;exempel (flik, semikolon eller komma separerade)"
+  },
+  "preview": {
+    "title": "Förhandsvisning",
+    "cardCount": "{count} kort",
+    "cardCountPlural": "{count} kort",
+    "deckName": "Kortleksnamn",
+    "deckNamePlaceholder": "Min språkkortlek",
+    "clearAll": "Rensa alla",
+    "noCards": "Inga kort än",
+    "noCardsHint": "Lägg till kort med hjälp av AI-generering, manuell inmatning eller filimport"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Framsida (term)",
+    "backPlaceholder": "Baksida (översättning)",
+    "examplePlaceholder": "Exempelmening (valfritt)",
+    "exampleTranslationPlaceholder": "Exempelöversättning (valfritt)",
+    "cancel": "Avbryt",
+    "save": "Spara"
+  },
+  "export": {
+    "button": "Exportera till Anki",
+    "exporting": "Exporterar..."
+  },
+  "languages": {
+    "en": "Engelska",
+    "es": "Spanska",
+    "fr": "Franska",
+    "de": "Tyska",
+    "it": "Italienska",
+    "pt": "Portugisiska",
+    "nl": "Nederländska",
+    "ru": "Ryska",
+    "ja": "Japanska",
+    "ko": "Koreanska",
+    "zh": "Kinesiska",
+    "ar": "Arabiska",
+    "hi": "Hindi",
+    "tr": "Turkiska",
+    "pl": "Polska",
+    "vi": "Vietnamesiska",
+    "th": "Thai",
+    "sv": "Svenska",
+    "da": "Danska",
+    "no": "Norska",
+    "fi": "Finska",
+    "el": "Grekiska",
+    "he": "Hebreiska",
+    "cs": "Tjeckiska",
+    "ro": "Rumänska",
+    "hu": "Ungerska",
+    "id": "Indonesiska",
+    "ms": "Malajiska",
+    "uk": "Ukrainska"
+  },
+  "languageSelector": {
+    "uiLanguage": "Användargränssnittsspråk",
+    "targetLanguage": "Läser:",
+    "selectLanguage": "Välj språk"
+  }
+}

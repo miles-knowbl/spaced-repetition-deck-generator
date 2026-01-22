@@ -1,10 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useDeckStore } from '@/stores/deckStore';
 import { Button } from '@/components/ui/button';
 import { Download, Loader2 } from 'lucide-react';
 
 export function ExportSection() {
+  const t = useTranslations('export');
   const { cards, deckName, description, isExporting, setIsExporting } =
     useDeckStore();
 
@@ -29,7 +31,6 @@ export function ExportSection() {
         throw new Error(err.error || 'Export failed');
       }
 
-      // Download the file
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -56,12 +57,12 @@ export function ExportSection() {
       {isExporting ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Exporting...
+          {t('exporting')}
         </>
       ) : (
         <>
           <Download className="mr-2 h-4 w-4" />
-          Export to Anki
+          {t('button')}
         </>
       )}
     </Button>

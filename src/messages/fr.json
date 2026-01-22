@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Générateur de Deck Anki",
+    "subtitle": "Créer des decks de flashcards pour l'apprentissage des langues",
+    "learning": "Apprentissage :"
+  },
+  "input": {
+    "title": "Ajouter des Cartes",
+    "tabs": {
+      "ai": "Générer avec l'IA",
+      "manual": "Manuel",
+      "import": "Importer"
+    }
+  },
+  "aiForm": {
+    "mode": "Mode",
+    "topic": "Sujet",
+    "wordList": "Liste de Mots",
+    "topicLabel": "Entrez un sujet (ex : \"nourriture et cuisine\")",
+    "wordListLabel": "Entrez les mots, un par ligne",
+    "topicPlaceholder": "Entrez un sujet comme \"vocabulaire de voyage\", \"termes commerciaux\", etc.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Cartes à générer",
+    "cards": "cartes",
+    "error": "Veuillez entrer un sujet ou une liste de mots",
+    "generating": "Génération pour {language}...",
+    "generate": "Générer des Cartes"
+  },
+  "manualForm": {
+    "termLabel": "Terme (dans la langue cible)",
+    "termPlaceholder": "ex : hola",
+    "translationLabel": "Traduction (Anglais)",
+    "translationPlaceholder": "ex : hello",
+    "exampleLabel": "Phrase d'exemple (optionnel)",
+    "examplePlaceholder": "ex : Hola! Como estas?",
+    "exampleTranslationLabel": "Traduction d'exemple (optionnel)",
+    "exampleTranslationPlaceholder": "ex : Hello! How are you?",
+    "required": "*",
+    "termError": "Veuillez entrer le terme",
+    "translationError": "Veuillez entrer la traduction",
+    "addCard": "Ajouter une Carte"
+  },
+  "importForm": {
+    "uploadTitle": "Cliquez pour télécharger un fichier CSV ou TXT",
+    "uploadHint": "Max 1MB. Format : avant, arrière, exemple (optionnel)",
+    "hasHeader": "Le fichier a une ligne d'en-tête (ignorer la première ligne)",
+    "fileSizeError": "Le fichier doit faire moins de 1MB",
+    "fileTypeError": "Le fichier doit être CSV ou TXT",
+    "noCardsError": "Aucune flashcard valide trouvée dans le fichier",
+    "parseError": "Impossible d'analyser le fichier. Vérifiez le format.",
+    "imported": "Importé {count} cartes",
+    "skipped": "({count} ignorées)",
+    "showWarnings": "Afficher {count} avertissement(s)",
+    "formatTitle": "Format attendu :",
+    "csvFormat": "CSV : avant,arrière,exemple,traductionExemple",
+    "txtFormat": "TXT : avant;arrière;exemple (séparés par une tabulation, un point-virgule ou une virgule)"
+  },
+  "preview": {
+    "title": "Aperçu",
+    "cardCount": "{count} carte",
+    "cardCountPlural": "{count} cartes",
+    "deckName": "Nom du Deck",
+    "deckNamePlaceholder": "Mon Deck de Langue",
+    "clearAll": "Effacer Tout",
+    "noCards": "Aucune carte pour le moment",
+    "noCardsHint": "Ajoutez des cartes en utilisant la génération par IA, l'entrée manuelle ou l'importation de fichier"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Avant (terme)",
+    "backPlaceholder": "Arrière (traduction)",
+    "examplePlaceholder": "Phrase d'exemple (optionnel)",
+    "exampleTranslationPlaceholder": "Traduction d'exemple (optionnel)",
+    "cancel": "Annuler",
+    "save": "Enregistrer"
+  },
+  "export": {
+    "button": "Exporter vers Anki",
+    "exporting": "Exportation en cours..."
+  },
+  "languages": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "de": "Allemand",
+    "it": "Italien",
+    "pt": "Portugais",
+    "nl": "Néerlandais",
+    "ru": "Russe",
+    "ja": "Japonais",
+    "ko": "Coréen",
+    "zh": "Chinois",
+    "ar": "Arabe",
+    "hi": "Hindi",
+    "tr": "Turc",
+    "pl": "Polonais",
+    "vi": "Vietnamien",
+    "th": "Thaï",
+    "sv": "Suédois",
+    "da": "Danois",
+    "no": "Norvégien",
+    "fi": "Finnois",
+    "el": "Grec",
+    "he": "Hébreu",
+    "cs": "Tchèque",
+    "ro": "Roumain",
+    "hu": "Hongrois",
+    "id": "Indonésien",
+    "ms": "Malais",
+    "uk": "Ukrainien"
+  },
+  "languageSelector": {
+    "uiLanguage": "Langue de l'Interface",
+    "targetLanguage": "Apprentissage :",
+    "selectLanguage": "Sélectionner une langue"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Deck Generator",
+    "subtitle": "Maak flashcard-decks voor taalonderwijs",
+    "learning": "Leren:"
+  },
+  "input": {
+    "title": "Kaarten Toevoegen",
+    "tabs": {
+      "ai": "AI Genereren",
+      "manual": "Handmatig",
+      "import": "Importeren"
+    }
+  },
+  "aiForm": {
+    "mode": "Modus",
+    "topic": "Onderwerp",
+    "wordList": "Woordenlijst",
+    "topicLabel": "Voer een onderwerp in (bijv. \"voedsel en koken\")",
+    "wordListLabel": "Voer woorden in, één per regel",
+    "topicPlaceholder": "Voer een onderwerp in zoals \"reiswoordenschat\", \"zakelijke termen\", enz.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Kaarten om te genereren",
+    "cards": "kaarten",
+    "error": "Voer alstublieft een onderwerp of woordenlijst in",
+    "generating": "Genereren voor {language}...",
+    "generate": "Kaarten Genereren"
+  },
+  "manualForm": {
+    "termLabel": "Term (in doeltaal)",
+    "termPlaceholder": "bijv. hola",
+    "translationLabel": "Vertaling (Nederlands)",
+    "translationPlaceholder": "bijv. hallo",
+    "exampleLabel": "Voorbeeldzin (optioneel)",
+    "examplePlaceholder": "bijv. Hola! Como estas?",
+    "exampleTranslationLabel": "Voorbeeldvertaling (optioneel)",
+    "exampleTranslationPlaceholder": "bijv. Hallo! Hoe gaat het met je?",
+    "required": "*",
+    "termError": "Voer alstublieft de term in",
+    "translationError": "Voer alstublieft de vertaling in",
+    "addCard": "Kaart Toevoegen"
+  },
+  "importForm": {
+    "uploadTitle": "Klik om CSV of TXT bestand te uploaden",
+    "uploadHint": "Max 1MB. Formaat: voor, achter, voorbeeld (optioneel)",
+    "hasHeader": "Bestand heeft headerrij (eerste rij overslaan)",
+    "fileSizeError": "Bestand moet kleiner zijn dan 1MB",
+    "fileTypeError": "Bestand moet CSV of TXT zijn",
+    "noCardsError": "Geen geldige flashcards gevonden in bestand",
+    "parseError": "Kon bestand niet parseren. Controleer formaat.",
+    "imported": "{count} kaarten geïmporteerd",
+    "skipped": "({count} overgeslagen)",
+    "showWarnings": "{count} waarschuwing(en) weergeven",
+    "formatTitle": "Verwacht formaat:",
+    "csvFormat": "CSV: voor,achter,voorbeeld,voorbeeldVertaling",
+    "txtFormat": "TXT: voor;achter;voorbeeld (tab, puntkomma of komma gescheiden)"
+  },
+  "preview": {
+    "title": "Voorbeeld",
+    "cardCount": "{count} kaart",
+    "cardCountPlural": "{count} kaarten",
+    "deckName": "Dek Naam",
+    "deckNamePlaceholder": "Mijn Taal Deck",
+    "clearAll": "Alles Wissen",
+    "noCards": "Nog geen kaarten",
+    "noCardsHint": "Voeg kaarten toe met AI-generatie, handmatige invoer of bestand importeren"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Voor (term)",
+    "backPlaceholder": "Achter (vertaling)",
+    "examplePlaceholder": "Voorbeeldzin (optioneel)",
+    "exampleTranslationPlaceholder": "Voorbeeldvertaling (optioneel)",
+    "cancel": "Annuleren",
+    "save": "Opslaan"
+  },
+  "export": {
+    "button": "Exporteren naar Anki",
+    "exporting": "Exporteren..."
+  },
+  "languages": {
+    "en": "Engels",
+    "es": "Spaans",
+    "fr": "Frans",
+    "de": "Duits",
+    "it": "Italiaans",
+    "pt": "Portugees",
+    "nl": "Nederlands",
+    "ru": "Russisch",
+    "ja": "Japans",
+    "ko": "Koreaans",
+    "zh": "Chinees",
+    "ar": "Arabisch",
+    "hi": "Hindi",
+    "tr": "Turks",
+    "pl": "Pools",
+    "vi": "Vietnamees",
+    "th": "Thai",
+    "sv": "Zweeds",
+    "da": "Deens",
+    "no": "Noors",
+    "fi": "Fins",
+    "el": "Grieks",
+    "he": "Hebreeuws",
+    "cs": "Tsjechisch",
+    "ro": "Roemeens",
+    "hu": "Hongaars",
+    "id": "Indonesisch",
+    "ms": "Maleisisch",
+    "uk": "Oekraïens"
+  },
+  "languageSelector": {
+    "uiLanguage": "UI-Taal",
+    "targetLanguage": "Leren:",
+    "selectLanguage": "Selecteer taal"
+  }
+}

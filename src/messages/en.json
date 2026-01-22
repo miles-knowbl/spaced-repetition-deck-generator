@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Deck Generator",
+    "subtitle": "Create flashcard decks for language learning",
+    "learning": "Learning:"
+  },
+  "input": {
+    "title": "Add Cards",
+    "tabs": {
+      "ai": "AI Generate",
+      "manual": "Manual",
+      "import": "Import"
+    }
+  },
+  "aiForm": {
+    "mode": "Mode",
+    "topic": "Topic",
+    "wordList": "Word List",
+    "topicLabel": "Enter a topic (e.g., \"food and cooking\")",
+    "wordListLabel": "Enter words, one per line",
+    "topicPlaceholder": "Enter a topic like \"travel vocabulary\", \"business terms\", etc.",
+    "wordListPlaceholder": "hola\ngracias\npor favor\nadios",
+    "cardCount": "Cards to generate",
+    "cards": "cards",
+    "error": "Please enter a topic or word list",
+    "generating": "Generating for {language}...",
+    "generate": "Generate Cards"
+  },
+  "manualForm": {
+    "termLabel": "Term (in target language)",
+    "termPlaceholder": "e.g., hola",
+    "translationLabel": "Translation (English)",
+    "translationPlaceholder": "e.g., hello",
+    "exampleLabel": "Example sentence (optional)",
+    "examplePlaceholder": "e.g., Hola! Como estas?",
+    "exampleTranslationLabel": "Example translation (optional)",
+    "exampleTranslationPlaceholder": "e.g., Hello! How are you?",
+    "required": "*",
+    "termError": "Please enter the term",
+    "translationError": "Please enter the translation",
+    "addCard": "Add Card"
+  },
+  "importForm": {
+    "uploadTitle": "Click to upload CSV or TXT file",
+    "uploadHint": "Max 1MB. Format: front, back, example (optional)",
+    "hasHeader": "File has header row (skip first row)",
+    "fileSizeError": "File must be under 1MB",
+    "fileTypeError": "File must be CSV or TXT",
+    "noCardsError": "No valid flashcards found in file",
+    "parseError": "Could not parse file. Check format.",
+    "imported": "Imported {count} cards",
+    "skipped": "({count} skipped)",
+    "showWarnings": "Show {count} warning(s)",
+    "formatTitle": "Expected format:",
+    "csvFormat": "CSV: front,back,example,exampleTranslation",
+    "txtFormat": "TXT: front;back;example (tab, semicolon, or comma separated)"
+  },
+  "preview": {
+    "title": "Preview",
+    "cardCount": "{count} card",
+    "cardCountPlural": "{count} cards",
+    "deckName": "Deck Name",
+    "deckNamePlaceholder": "My Language Deck",
+    "clearAll": "Clear All",
+    "noCards": "No cards yet",
+    "noCardsHint": "Add cards using AI generation, manual entry, or file import"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Front (term)",
+    "backPlaceholder": "Back (translation)",
+    "examplePlaceholder": "Example sentence (optional)",
+    "exampleTranslationPlaceholder": "Example translation (optional)",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "export": {
+    "button": "Export to Anki",
+    "exporting": "Exporting..."
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "de": "German",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "nl": "Dutch",
+    "ru": "Russian",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "zh": "Chinese",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "tr": "Turkish",
+    "pl": "Polish",
+    "vi": "Vietnamese",
+    "th": "Thai",
+    "sv": "Swedish",
+    "da": "Danish",
+    "no": "Norwegian",
+    "fi": "Finnish",
+    "el": "Greek",
+    "he": "Hebrew",
+    "cs": "Czech",
+    "ro": "Romanian",
+    "hu": "Hungarian",
+    "id": "Indonesian",
+    "ms": "Malay",
+    "uk": "Ukrainian"
+  },
+  "languageSelector": {
+    "uiLanguage": "UI Language",
+    "targetLanguage": "Learning:",
+    "selectLanguage": "Select language"
+  }
+}

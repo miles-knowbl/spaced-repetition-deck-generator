@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Generatore di Mazzi Anki",
+    "subtitle": "Crea mazzi di flashcard per l'apprendimento delle lingue",
+    "learning": "In studio:"
+  },
+  "input": {
+    "title": "Aggiungi Carte",
+    "tabs": {
+      "ai": "Generazione AI",
+      "manual": "Manuale",
+      "import": "Importa"
+    }
+  },
+  "aiForm": {
+    "mode": "Modalità",
+    "topic": "Argomento",
+    "wordList": "Elenco Parole",
+    "topicLabel": "Inserisci un argomento (es. \"cibo e cucina\")",
+    "wordListLabel": "Inserisci parole, una per riga",
+    "topicPlaceholder": "Inserisci un argomento come \"vocabolario di viaggio\", \"termini commerciali\", ecc.",
+    "wordListPlaceholder": "cibo\ngrazieariosto\nper favore\narrivederci",
+    "cardCount": "Carte da generare",
+    "cards": "carte",
+    "error": "Per favore inserisci un argomento o un elenco di parole",
+    "generating": "Generazione in corso per {language}...",
+    "generate": "Genera Carte"
+  },
+  "manualForm": {
+    "termLabel": "Termine (nella lingua di destinazione)",
+    "termPlaceholder": "es. hola",
+    "translationLabel": "Traduzione (inglese)",
+    "translationPlaceholder": "es. hello",
+    "exampleLabel": "Frase di esempio (opzionale)",
+    "examplePlaceholder": "es. Hola! Como estas?",
+    "exampleTranslationLabel": "Traduzione dell'esempio (opzionale)",
+    "exampleTranslationPlaceholder": "es. Hello! How are you?",
+    "required": "*",
+    "termError": "Per favore inserisci il termine",
+    "translationError": "Per favore inserisci la traduzione",
+    "addCard": "Aggiungi Carta"
+  },
+  "importForm": {
+    "uploadTitle": "Fai clic per caricare file CSV o TXT",
+    "uploadHint": "Max 1MB. Formato: fronte, retro, esempio (opzionale)",
+    "hasHeader": "Il file ha riga di intestazione (salta prima riga)",
+    "fileSizeError": "Il file deve essere inferiore a 1MB",
+    "fileTypeError": "Il file deve essere CSV o TXT",
+    "noCardsError": "Nessuna flashcard valida trovata nel file",
+    "parseError": "Impossibile analizzare il file. Controlla il formato.",
+    "imported": "Importate {count} carte",
+    "skipped": "({count} ignorate)",
+    "showWarnings": "Mostra {count} avvertimento/i",
+    "formatTitle": "Formato previsto:",
+    "csvFormat": "CSV: fronte,retro,esempio,traduzioneEsempio",
+    "txtFormat": "TXT: fronte;retro;esempio (separati da tabulazione, punto e virgola o virgola)"
+  },
+  "preview": {
+    "title": "Anteprima",
+    "cardCount": "{count} carta",
+    "cardCountPlural": "{count} carte",
+    "deckName": "Nome del Mazzo",
+    "deckNamePlaceholder": "Il Mio Mazzo Linguistico",
+    "clearAll": "Cancella Tutto",
+    "noCards": "Nessuna carta ancora",
+    "noCardsHint": "Aggiungi carte usando generazione AI, inserimento manuale o importazione di file"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Fronte (termine)",
+    "backPlaceholder": "Retro (traduzione)",
+    "examplePlaceholder": "Frase di esempio (opzionale)",
+    "exampleTranslationPlaceholder": "Traduzione dell'esempio (opzionale)",
+    "cancel": "Annulla",
+    "save": "Salva"
+  },
+  "export": {
+    "button": "Esporta su Anki",
+    "exporting": "Esportazione in corso..."
+  },
+  "languages": {
+    "en": "Inglese",
+    "es": "Spagnolo",
+    "fr": "Francese",
+    "de": "Tedesco",
+    "it": "Italiano",
+    "pt": "Portoghese",
+    "nl": "Olandese",
+    "ru": "Russo",
+    "ja": "Giapponese",
+    "ko": "Coreano",
+    "zh": "Cinese",
+    "ar": "Arabo",
+    "hi": "Hindi",
+    "tr": "Turco",
+    "pl": "Polacco",
+    "vi": "Vietnamita",
+    "th": "Tailandese",
+    "sv": "Svedese",
+    "da": "Danese",
+    "no": "Norvegese",
+    "fi": "Finlandese",
+    "el": "Greco",
+    "he": "Ebraico",
+    "cs": "Ceco",
+    "ro": "Rumeno",
+    "hu": "Ungherese",
+    "id": "Indonesiano",
+    "ms": "Malese",
+    "uk": "Ucraino"
+  },
+  "languageSelector": {
+    "uiLanguage": "Lingua Interfaccia",
+    "targetLanguage": "In studio:",
+    "selectLanguage": "Seleziona lingua"
+  }
+}

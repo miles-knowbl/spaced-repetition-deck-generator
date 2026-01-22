@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Anki Kartı Oluşturucu",
+    "subtitle": "Dil öğrenmesi için kart destesi oluşturun",
+    "learning": "Öğrenilen:"
+  },
+  "input": {
+    "title": "Kartları Ekle",
+    "tabs": {
+      "ai": "AI ile Oluştur",
+      "manual": "Manuel",
+      "import": "İçe Aktar"
+    }
+  },
+  "aiForm": {
+    "mode": "Mod",
+    "topic": "Konu",
+    "wordList": "Kelime Listesi",
+    "topicLabel": "Bir konu girin (örn: \"yemek ve pişirme\")",
+    "wordListLabel": "Kelimeleri girin, her satırda bir tane",
+    "topicPlaceholder": "\"seyahat sözlüğü\", \"iş terimleri\" vb. gibi bir konu girin",
+    "wordListPlaceholder": "merhaba\nteşekkür ederim\nlütfen\nhoşça kalın",
+    "cardCount": "Oluşturulacak kart sayısı",
+    "cards": "kart",
+    "error": "Lütfen bir konu veya kelime listesi girin",
+    "generating": "{language} için oluşturuluyor...",
+    "generate": "Kartları Oluştur"
+  },
+  "manualForm": {
+    "termLabel": "Terim (hedef dilde)",
+    "termPlaceholder": "örn: merhaba",
+    "translationLabel": "Çeviri (İngilizce)",
+    "translationPlaceholder": "örn: hello",
+    "exampleLabel": "Örnek cümle (isteğe bağlı)",
+    "examplePlaceholder": "örn: Merhaba! Nasılsın?",
+    "exampleTranslationLabel": "Örnek çeviri (isteğe bağlı)",
+    "exampleTranslationPlaceholder": "örn: Hello! How are you?",
+    "required": "*",
+    "termError": "Lütfen terimi girin",
+    "translationError": "Lütfen çeviriyi girin",
+    "addCard": "Kartı Ekle"
+  },
+  "importForm": {
+    "uploadTitle": "CSV veya TXT dosyası yüklemek için tıklayın",
+    "uploadHint": "Maksimum 1MB. Format: ön, arka, örnek (isteğe bağlı)",
+    "hasHeader": "Dosya başlık satırı içeriyor (ilk satırı atla)",
+    "fileSizeError": "Dosya 1MB'dan küçük olmalıdır",
+    "fileTypeError": "Dosya CSV veya TXT olmalıdır",
+    "noCardsError": "Dosyada geçerli flashcard bulunamadı",
+    "parseError": "Dosya ayrıştırılamadı. Biçimi kontrol edin.",
+    "imported": "{count} kart içe aktarıldı",
+    "skipped": "({count} atlandı)",
+    "showWarnings": "{count} uyarı(ları) göster",
+    "formatTitle": "Beklenen format:",
+    "csvFormat": "CSV: ön,arka,örnek,örnek çeviri",
+    "txtFormat": "TXT: ön;arka;örnek (sekme, noktalı virgül veya virgülle ayrılmış)"
+  },
+  "preview": {
+    "title": "Önizleme",
+    "cardCount": "{count} kart",
+    "cardCountPlural": "{count} kart",
+    "deckName": "Desteyi Adlandır",
+    "deckNamePlaceholder": "Benim Dil Destem",
+    "clearAll": "Tümünü Temizle",
+    "noCards": "Henüz kart yok",
+    "noCardsHint": "AI oluşturma, manuel giriş veya dosya içe aktarma kullanarak kartları ekleyin"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Ön (terim)",
+    "backPlaceholder": "Arka (çeviri)",
+    "examplePlaceholder": "Örnek cümle (isteğe bağlı)",
+    "exampleTranslationPlaceholder": "Örnek çeviri (isteğe bağlı)",
+    "cancel": "İptal",
+    "save": "Kaydet"
+  },
+  "export": {
+    "button": "Anki'ye Aktar",
+    "exporting": "Aktarılıyor..."
+  },
+  "languages": {
+    "en": "İngilizce",
+    "es": "İspanyolca",
+    "fr": "Fransızca",
+    "de": "Almanca",
+    "it": "İtalyanca",
+    "pt": "Portekizce",
+    "nl": "Flemenkçe",
+    "ru": "Rusça",
+    "ja": "Japonca",
+    "ko": "Korece",
+    "zh": "Çince",
+    "ar": "Arapça",
+    "hi": "Hintçe",
+    "tr": "Türkçe",
+    "pl": "Polonyaca",
+    "vi": "Vietnamca",
+    "th": "Taylandca",
+    "sv": "İsveççe",
+    "da": "Danca",
+    "no": "Norveççe",
+    "fi": "Fince",
+    "el": "Yunanca",
+    "he": "İbranice",
+    "cs": "Çekçe",
+    "ro": "Rumence",
+    "hu": "Macarca",
+    "id": "Endonezce",
+    "ms": "Malayca",
+    "uk": "Ukraynaca"
+  },
+  "languageSelector": {
+    "uiLanguage": "Arayüz Dili",
+    "targetLanguage": "Öğrenilen:",
+    "selectLanguage": "Dil seç"
+  }
+}

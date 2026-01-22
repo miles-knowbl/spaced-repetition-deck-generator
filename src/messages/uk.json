@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Генератор Anki Колод",
+    "subtitle": "Створюйте набори карток для вивчення мов",
+    "learning": "Вивчаєте:"
+  },
+  "input": {
+    "title": "Додати Картки",
+    "tabs": {
+      "ai": "Генерація AI",
+      "manual": "Вручну",
+      "import": "Імпорт"
+    }
+  },
+  "aiForm": {
+    "mode": "Режим",
+    "topic": "Тема",
+    "wordList": "Список слів",
+    "topicLabel": "Введіть тему (наприклад, \"їжа та готування\")",
+    "wordListLabel": "Введіть слова, по одному в рядку",
+    "topicPlaceholder": "Введіть тему, як \"словниковий запас подорожей\", \"ділові терміни\", тощо.",
+    "wordListPlaceholder": "привіт\nспасибі\nбудь ласка\nдо побачення",
+    "cardCount": "Карток для генерації",
+    "cards": "карток",
+    "error": "Будь ласка, введіть тему або список слів",
+    "generating": "Генерація для {language}...",
+    "generate": "Генерувати Картки"
+  },
+  "manualForm": {
+    "termLabel": "Термін (у цільовій мові)",
+    "termPlaceholder": "наприклад, привіт",
+    "translationLabel": "Переклад (англійська)",
+    "translationPlaceholder": "наприклад, hello",
+    "exampleLabel": "Приклад речення (опціонально)",
+    "examplePlaceholder": "наприклад, Привіт! Як дела?",
+    "exampleTranslationLabel": "Переклад прикладу (опціонально)",
+    "exampleTranslationPlaceholder": "наприклад, Hello! How are you?",
+    "required": "*",
+    "termError": "Будь ласка, введіть термін",
+    "translationError": "Будь ласка, введіть переклад",
+    "addCard": "Додати Картку"
+  },
+  "importForm": {
+    "uploadTitle": "Натисніть, щоб завантажити CSV або TXT файл",
+    "uploadHint": "Макс. 1MB. Формат: front, back, example (опціонально)",
+    "hasHeader": "Файл має рядок заголовку (пропустити перший рядок)",
+    "fileSizeError": "Файл повинен бути менше ніж 1MB",
+    "fileTypeError": "Файл повинен бути CSV або TXT",
+    "noCardsError": "У файлі не знайдено жодних карток",
+    "parseError": "Не вдалося розпарсити файл. Перевірте формат.",
+    "imported": "Імпортовано {count} карток",
+    "skipped": "({count} пропущено)",
+    "showWarnings": "Показати {count} попередження(нь)",
+    "formatTitle": "Очікуваний формат:",
+    "csvFormat": "CSV: front,back,example,exampleTranslation",
+    "txtFormat": "TXT: front;back;example (розділено табуляцією, крапкою з комою або комою)"
+  },
+  "preview": {
+    "title": "Попередній Перегляд",
+    "cardCount": "{count} картка",
+    "cardCountPlural": "{count} карток",
+    "deckName": "Назва Колоди",
+    "deckNamePlaceholder": "Моя Мовна Колода",
+    "clearAll": "Очистити Все",
+    "noCards": "Карток ще немає",
+    "noCardsHint": "Додайте картки за допомогою генерації AI, ручного введення або імпорту файлу"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Передня сторона (термін)",
+    "backPlaceholder": "Задня сторона (переклад)",
+    "examplePlaceholder": "Приклад речення (опціонально)",
+    "exampleTranslationPlaceholder": "Переклад прикладу (опціонально)",
+    "cancel": "Скасувати",
+    "save": "Зберегти"
+  },
+  "export": {
+    "button": "Експортувати в Anki",
+    "exporting": "Експортування..."
+  },
+  "languages": {
+    "en": "Англійська",
+    "es": "Іспанська",
+    "fr": "Французька",
+    "de": "Німецька",
+    "it": "Італійська",
+    "pt": "Португальська",
+    "nl": "Нідерландька",
+    "ru": "Російська",
+    "ja": "Японська",
+    "ko": "Корейська",
+    "zh": "Китайська",
+    "ar": "Арабська",
+    "hi": "Гінді",
+    "tr": "Турецька",
+    "pl": "Польська",
+    "vi": "В'єтнамська",
+    "th": "Таїландська",
+    "sv": "Шведська",
+    "da": "Данська",
+    "no": "Норвезька",
+    "fi": "Фінська",
+    "el": "Грецька",
+    "he": "Іврит",
+    "cs": "Чеська",
+    "ro": "Румунська",
+    "hu": "Угорська",
+    "id": "Індонезійська",
+    "ms": "Малайзька",
+    "uk": "Українська"
+  },
+  "languageSelector": {
+    "uiLanguage": "Мова Інтерфейсу",
+    "targetLanguage": "Вивчаєте:",
+    "selectLanguage": "Виберіть мову"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Gerador de Baralho Anki",
+    "subtitle": "Crie baralhos de flashcards para aprendizado de idiomas",
+    "learning": "Aprendendo:"
+  },
+  "input": {
+    "title": "Adicionar Cartões",
+    "tabs": {
+      "ai": "Gerar com IA",
+      "manual": "Manual",
+      "import": "Importar"
+    }
+  },
+  "aiForm": {
+    "mode": "Modo",
+    "topic": "Tópico",
+    "wordList": "Lista de Palavras",
+    "topicLabel": "Digite um tópico (ex: \"comida e culinária\")",
+    "wordListLabel": "Digite as palavras, uma por linha",
+    "topicPlaceholder": "Digite um tópico como \"vocabulário de viagem\", \"termos comerciais\", etc.",
+    "wordListPlaceholder": "olá\nobrigado\npor favor\nadeus",
+    "cardCount": "Cartões a gerar",
+    "cards": "cartões",
+    "error": "Por favor, digite um tópico ou lista de palavras",
+    "generating": "Gerando para {language}...",
+    "generate": "Gerar Cartões"
+  },
+  "manualForm": {
+    "termLabel": "Termo (no idioma de destino)",
+    "termPlaceholder": "ex: olá",
+    "translationLabel": "Tradução (Inglês)",
+    "translationPlaceholder": "ex: hello",
+    "exampleLabel": "Frase de exemplo (opcional)",
+    "examplePlaceholder": "ex: Olá! Como você está?",
+    "exampleTranslationLabel": "Tradução do exemplo (opcional)",
+    "exampleTranslationPlaceholder": "ex: Hello! How are you?",
+    "required": "*",
+    "termError": "Por favor, digite o termo",
+    "translationError": "Por favor, digite a tradução",
+    "addCard": "Adicionar Cartão"
+  },
+  "importForm": {
+    "uploadTitle": "Clique para enviar arquivo CSV ou TXT",
+    "uploadHint": "Máx 1MB. Formato: frente, verso, exemplo (opcional)",
+    "hasHeader": "O arquivo tem linha de cabeçalho (pular primeira linha)",
+    "fileSizeError": "O arquivo deve ter menos de 1MB",
+    "fileTypeError": "O arquivo deve ser CSV ou TXT",
+    "noCardsError": "Nenhum flashcard válido encontrado no arquivo",
+    "parseError": "Não foi possível analisar o arquivo. Verifique o formato.",
+    "imported": "{count} cartões importados",
+    "skipped": "({count} ignorados)",
+    "showWarnings": "Mostrar {count} aviso(s)",
+    "formatTitle": "Formato esperado:",
+    "csvFormat": "CSV: frente,verso,exemplo,traduçãoExemplo",
+    "txtFormat": "TXT: frente;verso;exemplo (separado por tabulação, ponto-e-vírgula ou vírgula)"
+  },
+  "preview": {
+    "title": "Pré-visualização",
+    "cardCount": "{count} cartão",
+    "cardCountPlural": "{count} cartões",
+    "deckName": "Nome do Baralho",
+    "deckNamePlaceholder": "Meu Baralho de Idioma",
+    "clearAll": "Limpar Tudo",
+    "noCards": "Nenhum cartão ainda",
+    "noCardsHint": "Adicione cartões usando geração por IA, entrada manual ou importação de arquivo"
+  },
+  "cardItem": {
+    "frontPlaceholder": "Frente (termo)",
+    "backPlaceholder": "Verso (tradução)",
+    "examplePlaceholder": "Frase de exemplo (opcional)",
+    "exampleTranslationPlaceholder": "Tradução do exemplo (opcional)",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "export": {
+    "button": "Exportar para Anki",
+    "exporting": "Exportando..."
+  },
+  "languages": {
+    "en": "Inglês",
+    "es": "Espanhol",
+    "fr": "Francês",
+    "de": "Alemão",
+    "it": "Italiano",
+    "pt": "Português",
+    "nl": "Holandês",
+    "ru": "Russo",
+    "ja": "Japonês",
+    "ko": "Coreano",
+    "zh": "Chinês",
+    "ar": "Árabe",
+    "hi": "Hindi",
+    "tr": "Turco",
+    "pl": "Polonês",
+    "vi": "Vietnamita",
+    "th": "Tailandês",
+    "sv": "Sueco",
+    "da": "Dinamarquês",
+    "no": "Norueguês",
+    "fi": "Finlandês",
+    "el": "Grego",
+    "he": "Hebraico",
+    "cs": "Tcheco",
+    "ro": "Romeno",
+    "hu": "Húngaro",
+    "id": "Indonésio",
+    "ms": "Malaio",
+    "uk": "Ucraniano"
+  },
+  "languageSelector": {
+    "uiLanguage": "Idioma da Interface",
+    "targetLanguage": "Aprendendo:",
+    "selectLanguage": "Selecione o idioma"
+  }
+}
