@@ -1,0 +1,100 @@
+name: Distribute
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-vercel:
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: vercel deploy --prod --token=$VERCEL_TOKEN
+
+  tarball:
+    name: Create & Upload Tarball
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get version
+        id: version
+        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Create tarball
+        run: |
+          tar --exclude='node_modules' \
+              --exclude='.git' \
+              --exclude='.env' \
+              --exclude='.env.local' \
+              --exclude='.next' \
+              --exclude='dist' \
+              --exclude='build' \
+              --exclude='coverage' \
+              --exclude='*.log' \
+              --exclude='.DS_Store' \
+              --exclude='.idea' \
+              --exclude='.vscode' \
+              --exclude='*.tgz' \
+              --exclude='.claude' \
+              --exclude='.mcp.json' \
+              --exclude='loop-state.json' \
+              --exclude='dream-state.md' \
+              -czvf spaced-repetition-deck-generator-${{ steps.version.outputs.version }}.tgz .
+
+      - name: Generate checksum
+        run: |
+          sha256sum spaced-repetition-deck-generator-${{ steps.version.outputs.version }}.tgz > checksum.txt
+          cat checksum.txt
+
+      - name: Delete existing release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release delete latest --yes
+
+      - name: Create release with tarball
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create latest \
+            --title "Latest Release (v${{ steps.version.outputs.version }})" \
+            --notes "Automatically updated on each push to main.
+
+          ## Download
+
+          - **Tarball**: \`spaced-repetition-deck-generator-${{ steps.version.outputs.version }}.tgz\`
+          - **SHA256**: See \`checksum.txt\`
+
+          ## Quick Start
+
+          \`\`\`bash
+          tar -xzf spaced-repetition-deck-generator-${{ steps.version.outputs.version }}.tgz
+          npm install
+          cp .env.example .env.local
+          # Add your OPENAI_API_KEY to .env.local
+          npm run dev
+          \`\`\`
+          " \
+            spaced-repetition-deck-generator-${{ steps.version.outputs.version }}.tgz \
+            checksum.txt

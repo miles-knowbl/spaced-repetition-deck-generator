@@ -45,3 +45,6 @@ next-env.d.ts
 .mcp.json
 loop-state.json
 dream-state.md
+
+# Vercel local config
+.vercel
