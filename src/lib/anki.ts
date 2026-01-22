@@ -1,9 +1,6 @@
-import Database from 'better-sqlite3';
+import initSqlJs, { Database } from 'sql.js';
 import JSZip from 'jszip';
 import type { Card } from '@/types';
-
-// Anki uses specific epoch for timestamps
-const ANKI_EPOCH = 1577836800000; // 2020-01-01
 
 function generateId(): number {
   return Date.now();
@@ -33,6 +30,16 @@ function formatCardContent(card: Card): { front: string; back: string } {
   return { front, back };
 }
 
+function hashCode(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash;
+  }
+  return hash;
+}
+
 export async function createApkgFile(
   deckName: string,
   description: string,
@@ -42,11 +49,12 @@ export async function createApkgFile(
   const modelId = generateId() + 1;
   const now = Date.now();
 
-  // Create in-memory SQLite database
-  const db = new Database(':memory:');
+  // Initialize SQL.js
+  const SQL = await initSqlJs();
+  const db: Database = new SQL.Database();
 
   // Create Anki schema
-  db.exec(`
+  db.run(`
     CREATE TABLE col (
       id integer primary key,
       crt integer not null,
@@ -254,35 +262,26 @@ export async function createApkgFile(
   };
 
   // Insert collection data
-  const colInsert = db.prepare(`
-    INSERT INTO col VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `);
-
-  colInsert.run(
-    1,
-    Math.floor(now / 1000),
-    Math.floor(now / 1000),
-    Math.floor(now / 1000),
-    11,
-    0,
-    0,
-    0,
-    JSON.stringify(conf),
-    JSON.stringify(model),
-    JSON.stringify(deck),
-    JSON.stringify(dconf),
-    '{}'
+  db.run(
+    `INSERT INTO col VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [
+      1,
+      Math.floor(now / 1000),
+      Math.floor(now / 1000),
+      Math.floor(now / 1000),
+      11,
+      0,
+      0,
+      0,
+      JSON.stringify(conf),
+      JSON.stringify(model),
+      JSON.stringify(deck),
+      JSON.stringify(dconf),
+      '{}',
+    ]
   );
 
   // Insert notes and cards
-  const noteInsert = db.prepare(`
-    INSERT INTO notes VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `);
-
-  const cardInsert = db.prepare(`
-    INSERT INTO cards VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `);
-
   cards.forEach((card, index) => {
     const noteId = now + index;
     const cardId = now + index + cards.length;
@@ -292,44 +291,50 @@ export async function createApkgFile(
     // Calculate checksum (first 8 chars of sha1 as int, simplified)
     const csum = Math.abs(hashCode(front)) % 2147483647;
 
-    noteInsert.run(
-      noteId,
-      guid,
-      modelId,
-      Math.floor(now / 1000),
-      -1,
-      '',
-      `${front}\x1f${back}`,
-      front,
-      csum,
-      0,
-      ''
+    db.run(
+      `INSERT INTO notes VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        noteId,
+        guid,
+        modelId,
+        Math.floor(now / 1000),
+        -1,
+        '',
+        `${front}\x1f${back}`,
+        front,
+        csum,
+        0,
+        '',
+      ]
     );
 
-    cardInsert.run(
-      cardId,
-      noteId,
-      deckId,
-      0,
-      Math.floor(now / 1000),
-      -1,
-      0,
-      0,
-      index + 1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      ''
+    db.run(
+      `INSERT INTO cards VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        cardId,
+        noteId,
+        deckId,
+        0,
+        Math.floor(now / 1000),
+        -1,
+        0,
+        0,
+        index + 1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        '',
+      ]
     );
   });
 
   // Export database to buffer
-  const dbBuffer = db.serialize();
+  const dbBuffer = db.export();
   db.close();
 
   // Create APKG (zip) file
@@ -343,14 +348,4 @@ export async function createApkgFile(
   });
 
   return apkgBuffer;
-}
-
-function hashCode(str: string): number {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash;
-  }
-  return hash;
 }
