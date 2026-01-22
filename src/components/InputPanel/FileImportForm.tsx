@@ -30,8 +30,8 @@ export function FileImportForm() {
     const extension = file.name.split('.').pop()?.toLowerCase();
     const isApkg = extension === 'apkg';
 
-    // Different size limits: 10MB for .apkg, 1MB for text files
-    const sizeLimit = isApkg ? 10 * 1024 * 1024 : 1024 * 1024;
+    // Different size limits: 50MB for .apkg (Vercel Pro), 1MB for text files
+    const sizeLimit = isApkg ? 50 * 1024 * 1024 : 1024 * 1024;
     if (file.size > sizeLimit) {
       setError(isApkg ? t('apkgSizeError') : t('fileSizeError'));
       return;

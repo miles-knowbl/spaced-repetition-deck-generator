@@ -2,6 +2,9 @@ import { NextRequest } from 'next/server';
 import initSqlJs from 'sql.js';
 import JSZip from 'jszip';
 
+// Vercel Pro: increase max duration for processing large files
+export const maxDuration = 60;
+
 interface ImportedCard {
   front: string;
   back: string;

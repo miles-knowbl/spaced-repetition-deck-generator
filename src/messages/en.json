@@ -46,7 +46,7 @@
     "importing": "Importing...",
     "hasHeader": "File has header row (skip first row)",
     "fileSizeError": "File must be under 1MB",
-    "apkgSizeError": "File must be under 10MB",
+    "apkgSizeError": "File must be under 50MB",
     "fileTypeError": "File must be .apkg, .csv, or .txt",
     "noCardsError": "No valid flashcards found in file",
     "parseError": "Could not parse file. Check format.",
