@@ -49,8 +49,10 @@ export async function createApkgFile(
   const modelId = generateId() + 1;
   const now = Date.now();
 
-  // Initialize SQL.js
-  const SQL = await initSqlJs();
+  // Initialize SQL.js with WASM from CDN (required for serverless)
+  const SQL = await initSqlJs({
+    locateFile: (file: string) => `https://sql.js.org/dist/${file}`,
+  });
   const db: Database = new SQL.Database();
 
   // Create Anki schema
