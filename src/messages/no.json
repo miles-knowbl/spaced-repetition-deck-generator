@@ -112,5 +112,210 @@
     "uiLanguage": "Grensesnittspråk",
     "targetLanguage": "Lærer:",
     "selectLanguage": "Velg språk"
+  },
+  "placeholders": {
+    "en": {
+      "term": "hello",
+      "translation": "hello",
+      "example": "Hello! How are you?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hello\nthank you\nplease\ngoodbye"
+    },
+    "es": {
+      "term": "hola",
+      "translation": "hello",
+      "example": "¡Hola! ¿Cómo estás?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hola\ngracias\npor favor\nadiós"
+    },
+    "fr": {
+      "term": "bonjour",
+      "translation": "hello",
+      "example": "Bonjour! Comment ça va?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "bonjour\nmerci\ns'il vous plaît\nau revoir"
+    },
+    "de": {
+      "term": "hallo",
+      "translation": "hello",
+      "example": "Hallo! Wie geht es dir?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hallo\ndanke\nbitte\nauf Wiedersehen"
+    },
+    "it": {
+      "term": "ciao",
+      "translation": "hello",
+      "example": "Ciao! Come stai?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "ciao\ngrazie\nper favore\narrivederci"
+    },
+    "pt": {
+      "term": "olá",
+      "translation": "hello",
+      "example": "Olá! Como você está?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "olá\nobrigado\npor favor\ntchau"
+    },
+    "nl": {
+      "term": "hallo",
+      "translation": "hello",
+      "example": "Hallo! Hoe gaat het?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hallo\nbedankt\nalstublieft\ntot ziens"
+    },
+    "ru": {
+      "term": "привет",
+      "translation": "hello",
+      "example": "Привет! Как дела?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "привет\nспасибо\nпожалуйста\nдо свидания"
+    },
+    "ja": {
+      "term": "こんにちは",
+      "translation": "hello",
+      "example": "こんにちは！お元気ですか？",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "こんにちは\nありがとう\nお願いします\nさようなら"
+    },
+    "ko": {
+      "term": "안녕하세요",
+      "translation": "hello",
+      "example": "안녕하세요! 어떻게 지내세요?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "안녕하세요\n감사합니다\n제발\n안녕히 가세요"
+    },
+    "zh": {
+      "term": "你好",
+      "translation": "hello",
+      "example": "你好！你好吗？",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "你好\n谢谢\n请\n再见"
+    },
+    "ar": {
+      "term": "مرحبا",
+      "translation": "hello",
+      "example": "مرحبا! كيف حالك؟",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "مرحبا\nشكرا\nمن فضلك\nمع السلامة"
+    },
+    "hi": {
+      "term": "नमस्ते",
+      "translation": "hello",
+      "example": "नमस्ते! आप कैसे हैं?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "नमस्ते\nधन्यवाद\nकृपया\nअलविदा"
+    },
+    "tr": {
+      "term": "merhaba",
+      "translation": "hello",
+      "example": "Merhaba! Nasılsın?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "merhaba\nteşekkürler\nlütfen\ngüle güle"
+    },
+    "pl": {
+      "term": "cześć",
+      "translation": "hello",
+      "example": "Cześć! Jak się masz?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "cześć\ndziękuję\nproszę\ndo widzenia"
+    },
+    "vi": {
+      "term": "xin chào",
+      "translation": "hello",
+      "example": "Xin chào! Bạn khỏe không?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "xin chào\ncảm ơn\nlàm ơn\ntạm biệt"
+    },
+    "th": {
+      "term": "สวัสดี",
+      "translation": "hello",
+      "example": "สวัสดี! คุณสบายดีไหม?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "สวัสดี\nขอบคุณ\nกรุณา\nลาก่อน"
+    },
+    "sv": {
+      "term": "hej",
+      "translation": "hello",
+      "example": "Hej! Hur mår du?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hej\ntack\nsnälla\nhejdå"
+    },
+    "da": {
+      "term": "hej",
+      "translation": "hello",
+      "example": "Hej! Hvordan har du det?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hej\ntak\nvær så venlig\nfarvel"
+    },
+    "no": {
+      "term": "hei",
+      "translation": "hello",
+      "example": "Hei! Hvordan har du det?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hei\ntakk\nvær så snill\nha det"
+    },
+    "fi": {
+      "term": "hei",
+      "translation": "hello",
+      "example": "Hei! Mitä kuuluu?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hei\nkiitos\nole hyvä\nnäkemiin"
+    },
+    "el": {
+      "term": "γεια",
+      "translation": "hello",
+      "example": "Γεια! Τι κάνεις;",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "γεια\nευχαριστώ\nπαρακαλώ\nαντίο"
+    },
+    "he": {
+      "term": "שלום",
+      "translation": "hello",
+      "example": "שלום! מה שלומך?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "שלום\nתודה\nבבקשה\nlהתראות"
+    },
+    "cs": {
+      "term": "ahoj",
+      "translation": "hello",
+      "example": "Ahoj! Jak se máš?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "ahoj\nděkuji\nprosím\nnashledanou"
+    },
+    "ro": {
+      "term": "bună",
+      "translation": "hello",
+      "example": "Bună! Ce mai faci?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "bună\nmulțumesc\nte rog\nla revedere"
+    },
+    "hu": {
+      "term": "szia",
+      "translation": "hello",
+      "example": "Szia! Hogy vagy?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "szia\nköszönöm\nkérem\nviszlát"
+    },
+    "id": {
+      "term": "halo",
+      "translation": "hello",
+      "example": "Halo! Apa kabar?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "halo\nterima kasih\ntolong\nselamat tinggal"
+    },
+    "ms": {
+      "term": "hello",
+      "translation": "hello",
+      "example": "Hello! Apa khabar?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "hello\nterima kasih\ntolong\nselamat tinggal"
+    },
+    "uk": {
+      "term": "привіт",
+      "translation": "hello",
+      "example": "Привіт! Як справи?",
+      "exampleTranslation": "Hello! How are you?",
+      "wordList": "привіт\nдякую\nбудь ласка\nдо побачення"
+    }
   }
 }

@@ -18,6 +18,7 @@ import { Loader2, Sparkles } from 'lucide-react';
 export function AIGenerationForm() {
   const t = useTranslations('aiForm');
   const tLang = useTranslations('languages');
+  const tPlaceholders = useTranslations('placeholders');
   const [mode, setMode] = useState<'topic' | 'wordlist'>('wordlist');
   const [content, setContent] = useState('');
   const [cardCount, setCardCount] = useState('10');
@@ -141,7 +142,7 @@ export function AIGenerationForm() {
           id="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          placeholder={mode === 'topic' ? t('topicPlaceholder') : t('wordListPlaceholder')}
+          placeholder={mode === 'topic' ? t('topicPlaceholder') : tPlaceholders(`${targetLanguage}.wordList`)}
           className="min-h-[140px]"
           disabled={isGenerating}
         />

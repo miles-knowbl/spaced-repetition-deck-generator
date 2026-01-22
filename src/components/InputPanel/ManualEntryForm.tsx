@@ -11,13 +11,19 @@ import { Plus } from 'lucide-react';
 
 export function ManualEntryForm() {
   const t = useTranslations('manualForm');
+  const tPlaceholders = useTranslations('placeholders');
+  const { targetLanguage, addCard } = useDeckStore();
   const [front, setFront] = useState('');
   const [back, setBack] = useState('');
   const [example, setExample] = useState('');
   const [exampleTranslation, setExampleTranslation] = useState('');
   const [error, setError] = useState<string | null>(null);
 
-  const { addCard } = useDeckStore();
+  // Get language-specific placeholder examples
+  const termExample = tPlaceholders(`${targetLanguage}.term`);
+  const translationExample = tPlaceholders(`${targetLanguage}.translation`);
+  const exampleSentence = tPlaceholders(`${targetLanguage}.example`);
+  const exampleTranslationText = tPlaceholders(`${targetLanguage}.exampleTranslation`);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,7 +64,7 @@ export function ManualEntryForm() {
           id="front"
           value={front}
           onChange={(e) => setFront(e.target.value)}
-          placeholder={t('termPlaceholder')}
+          placeholder={`e.g., ${termExample}`}
         />
       </div>
 
@@ -70,7 +76,7 @@ export function ManualEntryForm() {
           id="back"
           value={back}
           onChange={(e) => setBack(e.target.value)}
-          placeholder={t('translationPlaceholder')}
+          placeholder={`e.g., ${translationExample}`}
         />
       </div>
 
@@ -82,7 +88,7 @@ export function ManualEntryForm() {
           id="example"
           value={example}
           onChange={(e) => setExample(e.target.value)}
-          placeholder={t('examplePlaceholder')}
+          placeholder={`e.g., ${exampleSentence}`}
           className="min-h-[70px]"
         />
       </div>
@@ -95,7 +101,7 @@ export function ManualEntryForm() {
           id="exampleTranslation"
           value={exampleTranslation}
           onChange={(e) => setExampleTranslation(e.target.value)}
-          placeholder={t('exampleTranslationPlaceholder')}
+          placeholder={`e.g., ${exampleTranslationText}`}
           className="min-h-[70px]"
         />
       </div>

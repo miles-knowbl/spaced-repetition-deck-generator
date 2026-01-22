@@ -8,28 +8,27 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { CardList } from './CardList';
 import { ExportSection } from './ExportSection';
-import { Trash2, Layers } from 'lucide-react';
+import { Trash2 } from 'lucide-react';
 
 export function PreviewPanel() {
   const t = useTranslations('preview');
   const { cards, deckName, setDeckName, clearDeck } = useDeckStore();
 
   return (
-    <Card>
-      <CardHeader>
+    <Card className="shadow-elevated">
+      <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Layers className="h-5 w-5 text-muted-foreground" />
-            <CardTitle>{t('title')}</CardTitle>
-          </div>
-          <span className="text-sm text-muted-foreground bg-muted px-2.5 py-1 rounded-md">
+          <CardTitle className="text-base font-medium text-muted-foreground uppercase tracking-wide">
+            {t('title')}
+          </CardTitle>
+          <span className="text-xs font-mono text-muted-foreground bg-muted/50 px-2.5 py-1 rounded">
             {cards.length === 1 ? t('cardCount', { count: 1 }) : t('cardCountPlural', { count: cards.length })}
           </span>
         </div>
       </CardHeader>
-      <CardContent className="space-y-5">
+      <CardContent className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="deckName" className="text-sm font-medium">
+          <Label htmlFor="deckName" className="text-xs uppercase tracking-wide text-muted-foreground">
             {t('deckName')}
           </Label>
           <Input
@@ -37,20 +36,24 @@ export function PreviewPanel() {
             value={deckName}
             onChange={(e) => setDeckName(e.target.value)}
             placeholder={t('deckNamePlaceholder')}
+            className="font-medium"
           />
         </div>
 
+        <div className="divider" />
+
         <CardList />
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 pt-2">
           <ExportSection />
           {cards.length > 0 && (
             <Button
-              variant="outline"
+              variant="ghost"
+              size="sm"
               onClick={clearDeck}
-              className="text-destructive hover:text-destructive hover:bg-destructive/10 hover:border-destructive/30"
+              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
             >
-              <Trash2 className="mr-2 h-4 w-4" />
+              <Trash2 className="mr-2 h-3.5 w-3.5" />
               {t('clearAll')}
             </Button>
           )}
