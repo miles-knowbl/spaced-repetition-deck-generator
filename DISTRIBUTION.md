@@ -5,7 +5,7 @@ This document describes how to access and use the Spaced Repetition Deck Generat
 ## Distribution Methods
 
 - [x] **Tarball**: `spaced-repetition-deck-generator-0.1.0.tgz`
-- [ ] **Git**: GitHub repository (requires `gh` CLI - see below)
+- [x] **Git**: https://github.com/miles-knowbl/spaced-repetition-deck-generator
 - [x] **Hosted**: Vercel deployment
 
 ---
@@ -48,31 +48,15 @@ Note: You'll need to configure your own `OPENAI_API_KEY` environment variable in
 
 5. Open http://localhost:3000
 
-### Option 3: Clone from Git (Manual Setup)
-
-Until the GitHub repository is created, you can initialize git from the tarball:
+### Option 3: Clone from Git
 
 ```bash
-# Extract tarball first
-tar -xzf spaced-repetition-deck-generator-0.1.0.tgz
+git clone https://github.com/miles-knowbl/spaced-repetition-deck-generator.git
 cd spaced-repetition-deck-generator
-
-# Git is already initialized with history
-git log --oneline
-```
-
-To create a GitHub repository (requires [GitHub CLI](https://cli.github.com/)):
-
-```bash
-# Install gh CLI if needed
-# macOS: brew install gh
-# Other: https://cli.github.com/manual/installation
-
-# Authenticate
-gh auth login
-
-# Create repo (choose public or private)
-gh repo create spaced-repetition-deck-generator --public --source=. --push
+npm install
+cp .env.example .env.local
+# Edit .env.local and add your OpenAI API key
+npm run dev
 ```
 
 ---
