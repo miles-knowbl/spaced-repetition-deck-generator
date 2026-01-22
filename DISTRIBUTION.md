@@ -14,10 +14,10 @@ This document describes how to access and use the Spaced Repetition Deck Generat
 
 ### Option 1: Use Hosted Version
 
-Visit the deployed application (requires Vercel account access):
+Visit the deployed application:
 
 ```
-https://spaced-repetition-deck-generator-mau8tt0q0.vercel.app
+https://spaced-repetition-deck-generator.vercel.app
 ```
 
 Note: You'll need to configure your own `OPENAI_API_KEY` environment variable in Vercel settings for AI generation to work.
