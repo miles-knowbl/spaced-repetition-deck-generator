@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "src/app/api/import-apkg/route.ts": {
-      "maxDuration": 60
-    }
-  }
-}

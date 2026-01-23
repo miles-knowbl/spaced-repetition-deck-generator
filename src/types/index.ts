@@ -2,6 +2,7 @@ export interface Card {
   id: string;
   front: string;
   back: string;
+  originalFront?: string; // Original word before translation (for re-translation)
   example?: string;
   exampleTranslation?: string;
   notes?: string;

@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useDeckStore } from '@/stores/deckStore';
+import { createApkgBlob } from '@/lib/ankiExport';
 import { Button } from '@/components/ui/button';
 import { Download, Loader2 } from 'lucide-react';
 
@@ -13,25 +14,28 @@ export function ExportSection() {
   const handleExport = async () => {
     if (cards.length === 0) return;
 
+    // Filter to valid cards only
+    const validCards = cards.filter(
+      (card) =>
+        card.front && typeof card.front === 'string' &&
+        card.back && typeof card.back === 'string'
+    );
+
+    if (validCards.length === 0) {
+      alert('No valid cards to export');
+      return;
+    }
+
     setIsExporting(true);
 
     try {
-      const response = await fetch('/api/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          deckName: deckName || 'My Deck',
-          description,
-          cards,
-        }),
-      });
+      // Create .apkg file client-side (avoids serverless WASM issues)
+      const blob = await createApkgBlob(
+        deckName || 'My Deck',
+        description,
+        validCards
+      );
 
-      if (!response.ok) {
-        const err = await response.json();
-        throw new Error(err.error || 'Export failed');
-      }
-
-      const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;

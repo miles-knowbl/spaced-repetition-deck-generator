@@ -8,11 +8,11 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { CardList } from './CardList';
 import { ExportSection } from './ExportSection';
-import { Trash2 } from 'lucide-react';
+import { Trash2, Loader2 } from 'lucide-react';
 
 export function PreviewPanel() {
   const t = useTranslations('preview');
-  const { cards, deckName, setDeckName, clearDeck } = useDeckStore();
+  const { cards, deckName, setDeckName, clearDeck, isTranslating } = useDeckStore();
 
   return (
     <Card className="shadow-elevated">
@@ -21,9 +21,17 @@ export function PreviewPanel() {
           <CardTitle className="text-base font-medium text-muted-foreground uppercase tracking-wide">
             {t('title')}
           </CardTitle>
-          <span className="text-xs font-mono text-muted-foreground bg-muted/50 px-2.5 py-1 rounded">
-            {cards.length === 1 ? t('cardCount', { count: 1 }) : t('cardCountPlural', { count: cards.length })}
-          </span>
+          <div className="flex items-center gap-2">
+            {isTranslating && (
+              <span className="flex items-center gap-1.5 text-xs text-primary bg-primary/10 px-2.5 py-1 rounded">
+                <Loader2 className="h-3 w-3 animate-spin" />
+                Translating...
+              </span>
+            )}
+            <span className="text-xs font-mono text-muted-foreground bg-muted/50 px-2.5 py-1 rounded">
+              {cards.length === 1 ? t('cardCount', { count: 1 }) : t('cardCountPlural', { count: cards.length })}
+            </span>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="space-y-6">

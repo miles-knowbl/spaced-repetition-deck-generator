@@ -40,16 +40,16 @@ function hashCode(str: string): number {
   return hash;
 }
 
-export async function createApkgFile(
+export async function createApkgBlob(
   deckName: string,
   description: string,
   cards: Card[]
-): Promise<Buffer> {
+): Promise<Blob> {
   const deckId = generateId();
   const modelId = generateId() + 1;
   const now = Date.now();
 
-  // Initialize SQL.js with WASM from CDN (required for serverless)
+  // Initialize SQL.js with WASM from CDN (works in browser)
   const SQL = await initSqlJs({
     locateFile: (file: string) => `https://sql.js.org/dist/${file}`,
   });
@@ -344,10 +344,10 @@ export async function createApkgFile(
   zip.file('collection.anki2', dbBuffer);
   zip.file('media', '{}');
 
-  const apkgBuffer = await zip.generateAsync({
-    type: 'nodebuffer',
+  const apkgBlob = await zip.generateAsync({
+    type: 'blob',
     compression: 'DEFLATE',
   });
 
-  return apkgBuffer;
+  return apkgBlob;
 }

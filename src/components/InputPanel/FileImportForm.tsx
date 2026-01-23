@@ -2,9 +2,9 @@
 
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import JSZip from 'jszip';
 import { useDeckStore } from '@/stores/deckStore';
 import { parseFile } from '@/lib/fileParser';
+import { parseApkgFile } from '@/lib/apkgParser';
 import { Label } from '@/components/ui/label';
 import { Upload, FileText, CheckCircle2, Loader2 } from 'lucide-react';
 
@@ -22,23 +22,23 @@ export function FileImportForm() {
   const [error, setError] = useState<string | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { addCards, setDeckName } = useDeckStore();
+  const { addCardsAndTranslate, setDeckName } = useDeckStore();
 
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     const extension = file.name.split('.').pop()?.toLowerCase();
-    const isAnkiFile = extension === 'apkg' || extension === 'zip';
+    const isAnkiFile = extension === 'apkg';
 
-    // No size limit for .apkg/.zip (we extract only the small database client-side)
+    // No size limit for .apkg (we extract only the small database client-side)
     // 1MB limit for text files
     if (!isAnkiFile && file.size > 1024 * 1024) {
       setError(t('fileSizeError'));
       return;
     }
 
-    if (!['csv', 'txt', 'apkg', 'zip'].includes(extension || '')) {
+    if (!['csv', 'txt', 'apkg'].includes(extension || '')) {
       setError(t('fileTypeError'));
       return;
     }
@@ -50,41 +50,16 @@ export function FileImportForm() {
 
     try {
       if (isAnkiFile) {
-        // Extract only the database from .apkg/.zip client-side (handles any file size)
-        const arrayBuffer = await file.arrayBuffer();
-        const zip = await JSZip.loadAsync(arrayBuffer);
+        // Parse .apkg entirely client-side (avoids serverless WASM issues)
+        const apkgResult = await parseApkgFile(file);
 
-        // Find the collection database
-        const dbFile = zip.file('collection.anki2') || zip.file('collection.anki21');
-        if (!dbFile) {
-          throw new Error('Invalid Anki file: no collection database found');
-        }
-
-        // Extract just the database (typically <2MB even for huge decks)
-        const dbBlob = await dbFile.async('blob');
-
-        // Send only the small database to server
-        const formData = new FormData();
-        formData.append('database', dbBlob, 'collection.anki2');
-
-        const response = await fetch('/api/import-apkg', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.error || 'Failed to import Anki deck');
-        }
-
-        const apkgResult = await response.json();
-
-        addCards(apkgResult.cards);
+        // Add cards and translate to target language
+        const translateResult = await addCardsAndTranslate(apkgResult.cards);
         setDeckName(apkgResult.deckName);
         setResult({
-          imported: apkgResult.cards.length,
-          skipped: 0,
-          errors: [],
+          imported: translateResult?.imported ?? apkgResult.cards.length,
+          skipped: translateResult?.skipped ?? 0,
+          errors: translateResult?.skipped ? ['Some cards were skipped (no English detected on either side)'] : [],
           deckName: apkgResult.deckName,
         });
       } else {
@@ -98,11 +73,15 @@ export function FileImportForm() {
           return;
         }
 
-        addCards(parseResult.cards);
+        // Add cards and translate to target language
+        const translateResult = await addCardsAndTranslate(parseResult.cards);
         setResult({
-          imported: parseResult.cards.length,
-          skipped: parseResult.skipped,
-          errors: parseResult.errors.slice(0, 5),
+          imported: translateResult?.imported ?? parseResult.cards.length,
+          skipped: (parseResult.skipped || 0) + (translateResult?.skipped || 0),
+          errors: [
+            ...parseResult.errors.slice(0, 3),
+            ...(translateResult?.skipped ? ['Some cards were skipped (no English detected on either side)'] : []),
+          ],
         });
       }
     } catch (err) {
@@ -121,7 +100,7 @@ export function FileImportForm() {
         <input
           ref={fileInputRef}
           type="file"
-          accept=".csv,.txt,.apkg,.zip"
+          accept=".csv,.txt,.apkg"
           onChange={handleFileSelect}
           className="hidden"
           id="file-upload"
