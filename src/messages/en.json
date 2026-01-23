@@ -42,12 +42,12 @@
   },
   "importForm": {
     "uploadTitle": "Click to upload file",
-    "uploadHint": "Supports .apkg (Anki), .csv, and .txt files",
+    "uploadHint": "Supports .apkg, .zip (Anki), .csv, and .txt files",
     "importing": "Importing...",
     "hasHeader": "File has header row (skip first row)",
     "fileSizeError": "File must be under 1MB",
     "apkgSizeError": "File must be under 50MB",
-    "fileTypeError": "File must be .apkg, .csv, or .txt",
+    "fileTypeError": "File must be .apkg, .zip, .csv, or .txt",
     "noCardsError": "No valid flashcards found in file",
     "parseError": "Could not parse file. Check format.",
     "imported": "Imported {count} cards",
@@ -55,7 +55,7 @@
     "deckNameSet": "Deck name set to \"{name}\"",
     "showWarnings": "Show {count} warning(s)",
     "formatTitle": "Supported formats:",
-    "apkgFormat": "APKG: Anki deck files (import existing decks)",
+    "apkgFormat": "APKG/ZIP: Anki deck files (import existing decks)",
     "csvFormat": "CSV: front,back,example,exampleTranslation",
     "txtFormat": "TXT: front;back;example (tab, semicolon, or comma separated)"
   },

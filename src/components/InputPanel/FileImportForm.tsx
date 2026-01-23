@@ -28,16 +28,16 @@ export function FileImportForm() {
     if (!file) return;
 
     const extension = file.name.split('.').pop()?.toLowerCase();
-    const isApkg = extension === 'apkg';
+    const isAnkiFile = extension === 'apkg' || extension === 'zip';
 
-    // Different size limits: 50MB for .apkg (Vercel Pro), 1MB for text files
-    const sizeLimit = isApkg ? 50 * 1024 * 1024 : 1024 * 1024;
+    // Different size limits: 50MB for .apkg/.zip (Vercel Pro), 1MB for text files
+    const sizeLimit = isAnkiFile ? 50 * 1024 * 1024 : 1024 * 1024;
     if (file.size > sizeLimit) {
-      setError(isApkg ? t('apkgSizeError') : t('fileSizeError'));
+      setError(isAnkiFile ? t('apkgSizeError') : t('fileSizeError'));
       return;
     }
 
-    if (!['csv', 'txt', 'apkg'].includes(extension || '')) {
+    if (!['csv', 'txt', 'apkg', 'zip'].includes(extension || '')) {
       setError(t('fileTypeError'));
       return;
     }
@@ -48,8 +48,8 @@ export function FileImportForm() {
     setIsLoading(true);
 
     try {
-      if (isApkg) {
-        // Handle .apkg files via API
+      if (isAnkiFile) {
+        // Handle .apkg/.zip files via API
         const formData = new FormData();
         formData.append('file', file);
 
@@ -107,7 +107,7 @@ export function FileImportForm() {
         <input
           ref={fileInputRef}
           type="file"
-          accept=".csv,.txt,.apkg"
+          accept=".csv,.txt,.apkg,.zip"
           onChange={handleFileSelect}
           className="hidden"
           id="file-upload"
