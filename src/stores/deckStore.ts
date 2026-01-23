@@ -79,7 +79,6 @@ export const useDeckStore = create<DeckState>((set, get) => ({
   addCards: (newCards) =>
     set((state) => ({
       cards: [
-        ...state.cards,
         ...newCards.map((card) => ({
           ...card,
           id: crypto.randomUUID(),
@@ -87,19 +86,20 @@ export const useDeckStore = create<DeckState>((set, get) => ({
           // Store original front for re-translation
           originalFront: card.originalFront || card.front,
         })),
+        ...state.cards,
       ],
     })),
 
   addCard: (card) =>
     set((state) => ({
       cards: [
-        ...state.cards,
         {
           ...card,
           id: crypto.randomUUID(),
           createdAt: new Date(),
           originalFront: card.originalFront || card.front,
         },
+        ...state.cards,
       ],
     })),
 
@@ -260,10 +260,10 @@ export const useDeckStore = create<DeckState>((set, get) => ({
           };
         });
 
-        // Add cards to store as they complete
+        // Add cards to store as they complete (at the top)
         if (batchCards.length > 0) {
           set((state) => ({
-            cards: [...state.cards, ...batchCards],
+            cards: [...batchCards, ...state.cards],
           }));
         }
 
@@ -279,12 +279,12 @@ export const useDeckStore = create<DeckState>((set, get) => ({
       return { imported: totalImported, skipped: totalSkipped };
     } catch (error) {
       console.error('Translation error:', error);
-      // On error, add remaining cards without translation
+      // On error, add remaining cards without translation (at the top)
       const addedIds = new Set(get().cards.map(c => c.id));
       const remainingCards = cardsWithIds.filter(c => !addedIds.has(c.id));
       if (remainingCards.length > 0) {
         set((state) => ({
-          cards: [...state.cards, ...remainingCards],
+          cards: [...remainingCards, ...state.cards],
         }));
       }
       return { imported: totalImported + remainingCards.length, skipped: totalSkipped };

@@ -19,7 +19,7 @@ export function AIGenerationForm() {
   const t = useTranslations('aiForm');
   const tLang = useTranslations('languages');
   const tPlaceholders = useTranslations('placeholders');
-  const [mode, setMode] = useState<'topic' | 'wordlist'>('wordlist');
+  const [mode, setMode] = useState<'topic' | 'wordlist'>('topic');
   const [content, setContent] = useState('');
   const [cardCount, setCardCount] = useState('10');
   const [error, setError] = useState<string | null>(null);
