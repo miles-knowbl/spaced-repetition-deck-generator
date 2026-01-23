@@ -31,25 +31,33 @@ function stripHtml(html: string): string {
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    const file = formData.get('file') as File;
 
-    if (!file) {
+    // Support both: pre-extracted database OR full .apkg file
+    const database = formData.get('database') as File | null;
+    const file = formData.get('file') as File | null;
+
+    let dbBuffer: Uint8Array;
+
+    if (database) {
+      // Client already extracted the database (handles large files)
+      dbBuffer = new Uint8Array(await database.arrayBuffer());
+    } else if (file) {
+      // Full .apkg file uploaded (legacy/small files)
+      const arrayBuffer = await file.arrayBuffer();
+      const zip = await JSZip.loadAsync(arrayBuffer);
+
+      const dbFile = zip.file('collection.anki2') || zip.file('collection.anki21');
+      if (!dbFile) {
+        return Response.json(
+          { error: 'Invalid .apkg file: no collection database found' },
+          { status: 400 }
+        );
+      }
+
+      dbBuffer = await dbFile.async('uint8array');
+    } else {
       return Response.json({ error: 'No file provided' }, { status: 400 });
     }
-
-    const arrayBuffer = await file.arrayBuffer();
-    const zip = await JSZip.loadAsync(arrayBuffer);
-
-    // Find the collection database (collection.anki2 or collection.anki21)
-    const dbFile = zip.file('collection.anki2') || zip.file('collection.anki21');
-    if (!dbFile) {
-      return Response.json(
-        { error: 'Invalid .apkg file: no collection database found' },
-        { status: 400 }
-      );
-    }
-
-    const dbBuffer = await dbFile.async('uint8array');
 
     // Initialize SQL.js with WASM from CDN
     const SQL = await initSqlJs({

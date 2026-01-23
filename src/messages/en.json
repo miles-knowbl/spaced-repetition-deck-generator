@@ -42,7 +42,7 @@
   },
   "importForm": {
     "uploadTitle": "Click to upload file",
-    "uploadHint": "Supports .apkg, .zip (Anki), .csv, and .txt files",
+    "uploadHint": "Supports .apkg, .zip (Anki, any size), .csv, and .txt files",
     "importing": "Importing...",
     "hasHeader": "File has header row (skip first row)",
     "fileSizeError": "File must be under 1MB",

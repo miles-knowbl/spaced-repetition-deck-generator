@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
+import JSZip from 'jszip';
 import { useDeckStore } from '@/stores/deckStore';
 import { parseFile } from '@/lib/fileParser';
 import { Label } from '@/components/ui/label';
@@ -30,10 +31,10 @@ export function FileImportForm() {
     const extension = file.name.split('.').pop()?.toLowerCase();
     const isAnkiFile = extension === 'apkg' || extension === 'zip';
 
-    // Different size limits: 50MB for .apkg/.zip (Vercel Pro), 1MB for text files
-    const sizeLimit = isAnkiFile ? 50 * 1024 * 1024 : 1024 * 1024;
-    if (file.size > sizeLimit) {
-      setError(isAnkiFile ? t('apkgSizeError') : t('fileSizeError'));
+    // No size limit for .apkg/.zip (we extract only the small database client-side)
+    // 1MB limit for text files
+    if (!isAnkiFile && file.size > 1024 * 1024) {
+      setError(t('fileSizeError'));
       return;
     }
 
@@ -49,9 +50,22 @@ export function FileImportForm() {
 
     try {
       if (isAnkiFile) {
-        // Handle .apkg/.zip files via API
+        // Extract only the database from .apkg/.zip client-side (handles any file size)
+        const arrayBuffer = await file.arrayBuffer();
+        const zip = await JSZip.loadAsync(arrayBuffer);
+
+        // Find the collection database
+        const dbFile = zip.file('collection.anki2') || zip.file('collection.anki21');
+        if (!dbFile) {
+          throw new Error('Invalid Anki file: no collection database found');
+        }
+
+        // Extract just the database (typically <2MB even for huge decks)
+        const dbBlob = await dbFile.async('blob');
+
+        // Send only the small database to server
         const formData = new FormData();
-        formData.append('file', file);
+        formData.append('database', dbBlob, 'collection.anki2');
 
         const response = await fetch('/api/import-apkg', {
           method: 'POST',
@@ -60,7 +74,7 @@ export function FileImportForm() {
 
         if (!response.ok) {
           const errorData = await response.json();
-          throw new Error(errorData.error || 'Failed to import .apkg file');
+          throw new Error(errorData.error || 'Failed to import Anki deck');
         }
 
         const apkgResult = await response.json();
